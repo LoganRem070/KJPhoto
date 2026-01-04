@@ -115,38 +115,38 @@ const PhotoBoothPage: React.FC = () => {
         {/* Normal Tier - Ring Light Stand */}
         <ParallaxSection 
           subtitle="Tier 1"
-          title="CLASSIC RING"
+          title="ROAMER"
           description="Our most versatile and sleek option. Perfect for weddings and social parties where aesthetics matter most."
           features={["Digital Sharing", "Standard Props", "LED Ring Light", "Online Gallery"]}
-          imageSrc="https://images.squarespace-cdn.com/content/v1/5c1a85e136099b22a6884511/1585671168434-Y0Z3Z3D5D5D5D5D5D5D5/Ring+Light+Photo+Booth+Rental" 
+          imageSrc="assets\Roamer.png" 
         />
 
         {/* Premium Tier - Boxy Standalone */}
         <ParallaxSection 
           subtitle="Tier 2"
-          title="THE STUDIO BOX"
+          title="IPAD PHOTO BOOTH"
           description="A professional-grade standalone kiosk with built-in printing and high-speed processing. The gold standard for corporate events."
           features={["DSLR Quality", "Instant Printing", "Customized Branding", "Attendant Included"]}
-          imageSrc="https://photo-booth.com/wp-content/uploads/2021/08/kiosk-photo-booth.png"
+          imageSrc="assets\IPadBooth.png"
           reverse
         />
 
         {/* Interactive Tier - Mirror Booth */}
         <ParallaxSection 
           subtitle="Tier 3"
-          title="MAGIC MIRROR"
+          title="DSLR CAMERA BOOTH"
           description="A full-length interactive mirror that communicates with guests through touch and animations. Elegant and engaging."
           features={["Full Length Photos", "Touch Screen Interface", "Interactive Animations", "Luxury Prop Kit"]}
-          imageSrc="https://www.partybooths.co.uk/wp-content/uploads/2019/02/magic-mirror-photo-booth-hire.png"
+          imageSrc="assets\DSLRBooth.png"
         />
 
         {/* 360 Tier - 360 Platform */}
         <ParallaxSection 
           subtitle="Tier 4"
-          title="360 CINEMA"
+          title="360 VIDEO EXPERIENCE"
           description="The ultimate showstopper. High-speed cinematic video captures every angle of the excitement in stunning slow motion."
-          features={["Slow-Motion Video", "Overlay FX", "LED Base", "Instant QR Delivery"]}
-          imageSrc="https://360photobooth.net/wp-content/uploads/2022/01/360-photo-booth-transparent.png"
+          features={["Slow-Motion Video", "Overlay FX", "LED Base", "Same Day Text / Email Delivery"]}
+          imageSrc="assets\Fake360.png"
           reverse
         />
       </div>
