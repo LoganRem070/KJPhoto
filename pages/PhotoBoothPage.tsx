@@ -127,7 +127,7 @@ const PhotoBoothPage: React.FC = () => {
           title="IPAD PHOTO BOOTH"
           description="A professional-grade standalone kiosk with built-in printing and high-speed processing. The gold standard for corporate events."
           features={["DSLR Quality", "Instant Printing", "Customized Branding", "Attendant Included"]}
-          imageSrc="https://github.com/LoganRem070/KJPhoto/blob/311b714a5dfbce1c0005c2e8a9235ae94d91b913/assets/IPadBooth.png"
+          imageSrc="https://github.com/LoganRem070/KJPhoto/blob/main/assets/IPadBooth.png?raw=true"
           reverse
         />
 
