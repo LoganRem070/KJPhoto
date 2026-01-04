@@ -121,7 +121,7 @@ const PhotoBoothPage: React.FC = () => {
           imageSrc="https://loganrem070.github.io/KJPhoto/assets/Roamer.png" 
         />
 
-        {/* Premium Tier - Boxy Standalone  */}
+        {/* Premium Tier - Boxy Standalone */}
         <ParallaxSection 
           subtitle="Tier 2"
           title="IPAD PHOTO BOOTH"
