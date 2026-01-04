@@ -118,7 +118,7 @@ const PhotoBoothPage: React.FC = () => {
           title="ROAMER"
           description="Our most versatile and sleek option. Perfect for weddings and social parties where aesthetics matter most."
           features={["Digital Sharing", "Standard Props", "LED Ring Light"]}
-          imageSrc="https://loganrem070.github.io/KJPhoto/assets/Roamer.png" 
+          imageSrc="https://github.com/LoganRem070/KJPhoto/blob/main/assets/Roamer.png?raw=true" 
         />
 
         {/* Premium Tier - Boxy Standalone */}
@@ -137,7 +137,7 @@ const PhotoBoothPage: React.FC = () => {
           title="DSLR CAMERA BOOTH"
           description="A full-length interactive mirror that communicates with guests through touch and animations. Elegant and engaging."
           features={["Full Length Photos", "Touch Screen Interface", "Interactive Animations", "Luxury Prop Kit"]}
-          imageSrc="/KJPhoto/assets/DSLRBooth.png"
+          imageSrc="https://github.com/LoganRem070/KJPhoto/blob/main/assets/DSLRBooth.png?raw=true"
         />
 
         {/* 360 Tier - 360 Platform */}
@@ -146,7 +146,7 @@ const PhotoBoothPage: React.FC = () => {
           title="360 VIDEO EXPERIENCE"
           description="The ultimate showstopper. High-speed cinematic video captures every angle of the excitement in stunning slow motion."
           features={["Slow-Motion Video", "Overlay FX", "LED Base", "Same Day Text / Email Delivery"]}
-          imageSrc="/KJPhoto/assets/Fake360.png"
+          imageSrc="https://github.com/LoganRem070/KJPhoto/blob/main/assets/Fake360.png?raw=true"
           reverse
         />
       </div>
