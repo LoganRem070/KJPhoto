@@ -118,7 +118,7 @@ const PhotoBoothPage: React.FC = () => {
           title="ROAMER"
           description="Our most versatile and sleek option. Perfect for weddings and social parties where aesthetics matter most."
           features={["Digital Sharing", "Standard Props", "LED Ring Light", "Online Gallery"]}
-          imageSrc="/KJPhoto/assets/Roamer.png" 
+          imageSrc="https://loganrem070.github.io/KJPhoto/assets/Roamer.png" 
         />
 
         {/* Premium Tier - Boxy Standalone */}
