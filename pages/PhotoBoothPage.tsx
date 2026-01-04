@@ -118,7 +118,7 @@ const PhotoBoothPage: React.FC = () => {
           title="ROAMER"
           description="Our most versatile and sleek option. Perfect for weddings and social parties where aesthetics matter most."
           features={["Digital Sharing", "Standard Props", "LED Ring Light", "Online Gallery"]}
-          imageSrc="assets\Roamer.png" 
+          imageSrc="/KJPhoto/assets/Roamer.png" 
         />
 
         {/* Premium Tier - Boxy Standalone */}
@@ -127,7 +127,7 @@ const PhotoBoothPage: React.FC = () => {
           title="IPAD PHOTO BOOTH"
           description="A professional-grade standalone kiosk with built-in printing and high-speed processing. The gold standard for corporate events."
           features={["DSLR Quality", "Instant Printing", "Customized Branding", "Attendant Included"]}
-          imageSrc="assets\IPadBooth.png"
+          imageSrc="/KJPhoto/assets/IPadBooth.png"
           reverse
         />
 
@@ -137,7 +137,7 @@ const PhotoBoothPage: React.FC = () => {
           title="DSLR CAMERA BOOTH"
           description="A full-length interactive mirror that communicates with guests through touch and animations. Elegant and engaging."
           features={["Full Length Photos", "Touch Screen Interface", "Interactive Animations", "Luxury Prop Kit"]}
-          imageSrc="assets\DSLRBooth.png"
+          imageSrc="/KJPhoto/assets/DSLRBooth.png"
         />
 
         {/* 360 Tier - 360 Platform */}
@@ -146,7 +146,7 @@ const PhotoBoothPage: React.FC = () => {
           title="360 VIDEO EXPERIENCE"
           description="The ultimate showstopper. High-speed cinematic video captures every angle of the excitement in stunning slow motion."
           features={["Slow-Motion Video", "Overlay FX", "LED Base", "Same Day Text / Email Delivery"]}
-          imageSrc="assets\Fake360.png"
+          imageSrc="/KJPhoto/assets/Fake360.png"
           reverse
         />
       </div>
