@@ -37,7 +37,7 @@ const ParallaxSection = ({
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-xs font-bold uppercase tracking-[0.3em] text-gray-500">{subtitle}</span>
+          <span className="text-m font-bold uppercase tracking-[0.3em] text-gray-500">{subtitle}</span>
           <h2 className="text-5xl md:text-7xl font-bold tracking-tighter mt-2">{title}</h2>
           <p className="text-gray-400 mt-6 text-lg leading-relaxed max-w-md">
             {description}
@@ -107,14 +107,15 @@ const PhotoBoothPage: React.FC = () => {
           transition={{ delay: 0.2 }}
           className="text-gray-400 mt-8 max-w-2xl text-xl font-light"
         >
-          Elevate your event with our premium interactive photo booth solutions. From classic prints to 360 cinematic videos.
+          Elevate your event with our premium interactive photo booth solutions. From classic prints to 360 cinematic videos. 
+          All of our booths come with an on site Attendant and a suitcase of luxury props.
         </motion.p>
       </header>
 
       <div className="space-y-32 pb-32">
         {/* Normal Tier - Ring Light Stand */}
         <ParallaxSection 
-          subtitle="Tier 1"
+          subtitle="$999"
           title="ROAMER"
           description="Our most versatile and sleek option. Perfect for weddings and social parties where aesthetics matter most."
           features={["Digital Sharing", "Standard Props", "LED Ring Light"]}
@@ -123,7 +124,7 @@ const PhotoBoothPage: React.FC = () => {
 
         {/* Premium Tier - Boxy Standalone */}
         <ParallaxSection 
-          subtitle="Tier 2"
+          subtitle="$999"
           title="IPAD PHOTO BOOTH"
           description="A professional-grade standalone kiosk with built-in printing and high-speed processing. The gold standard for corporate events."
           features={["DSLR Quality", "Instant Printing", "Customized Branding", "Attendant Included"]}
@@ -133,7 +134,7 @@ const PhotoBoothPage: React.FC = () => {
 
         {/* Interactive Tier - Mirror Booth  */}
         <ParallaxSection 
-          subtitle="Tier 3"
+          subtitle="$999"
           title="DSLR CAMERA BOOTH"
           description="A full-length interactive mirror that communicates with guests through touch and animations. Elegant and engaging."
           features={["Full Length Photos", "Touch Screen Interface", "Interactive Animations", "Luxury Prop Kit"]}
@@ -142,7 +143,7 @@ const PhotoBoothPage: React.FC = () => {
 
         {/* 360 Tier - 360 Platform */}
         <ParallaxSection 
-          subtitle="Tier 4"
+          subtitle="$999"
           title="360 VIDEO EXPERIENCE"
           description="The ultimate showstopper. High-speed cinematic video captures every angle of the excitement in stunning slow motion."
           features={["Slow-Motion Video", "Overlay FX", "LED Base", "Same Day Text / Email Delivery"]}
