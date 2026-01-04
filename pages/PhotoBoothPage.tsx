@@ -117,7 +117,7 @@ const PhotoBoothPage: React.FC = () => {
           subtitle="Tier 1"
           title="ROAMER"
           description="Our most versatile and sleek option. Perfect for weddings and social parties where aesthetics matter most."
-          features={["Digital Sharing", "Standard Props", "LED Ring Light", "Online Gallery"]}
+          features={["Digital Sharing", "Standard Props", "LED Ring Light"]}
           imageSrc="https://loganrem070.github.io/KJPhoto/assets/Roamer.png" 
         />
 
