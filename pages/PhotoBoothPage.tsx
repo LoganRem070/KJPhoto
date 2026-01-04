@@ -131,7 +131,7 @@ const PhotoBoothPage: React.FC = () => {
           reverse
         />
 
-        {/* Interactive Tier - Mirror Booth */}
+        {/* Interactive Tier - Mirror Booth  */}
         <ParallaxSection 
           subtitle="Tier 3"
           title="DSLR CAMERA BOOTH"
