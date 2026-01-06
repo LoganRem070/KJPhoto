@@ -3,52 +3,109 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const PhotoServices: React.FC = () => {
-  const images = [
-    { id: 10, title: 'Weddings', category: 'Events' },
-    { id: 20, title: 'Editorials', category: 'Fashion' },
-    { id: 30, title: 'Portraits', category: 'Art' },
-    { id: 40, title: 'Corporate', category: 'Business' },
-    { id: 50, title: 'Nature', category: 'Fine Art' },
-    { id: 60, title: 'Architecture', category: 'Design' },
+  const sections = [
+    {
+      title: 'Weddings',
+      description: 'Timeless moments on your special day',
+      images: Array.from({ length: 12 }, (_, i) => ({
+        id: 10 + i,
+        photoId: 10 + i * 5,
+      })),
+    },
+    {
+      title: 'Sweet 16s',
+      description: 'Celebrating a milestone moment',
+      images: Array.from({ length: 12 }, (_, i) => ({
+        id: 100 + i,
+        photoId: 50 + i * 5,
+      })),
+    },
   ];
 
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="max-w-7xl mx-auto px-6 py-20"
-    >
-      <header className="mb-20 text-center space-y-4">
-        <h1 className="text-6xl font-bold tracking-tighter">PHOTOGRAPHY</h1>
-        <p className="text-gray-500 max-w-xl mx-auto uppercase tracking-widest text-xs font-bold">Documenting the beauty in every detail.</p>
-      </header>
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.05,
+        delayChildren: 0.2,
+      },
+    },
+  };
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {images.map((img, i) => (
-          <motion.div 
-            key={img.id}
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: i * 0.1 }}
-            viewport={{ once: true }}
-            className="group relative h-[400px] overflow-hidden rounded-xl bg-neutral-900"
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    show: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.4,
+        ease: 'easeOut',
+      },
+    },
+  };
+
+  return (
+    <div className="bg-neutral-950 min-h-screen">
+      {/* Header */}
+      <motion.header 
+        className="pt-20 pb-12 text-center px-6"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h1 className="text-7xl md:text-8xl font-bold tracking-tighter bg-gradient-to-r from-white via-gray-100 to-gray-400 bg-clip-text text-transparent mb-4">
+          PHOTOGRAPHY
+        </h1>
+        <p className="text-gray-400 uppercase tracking-widest text-sm font-light">
+          Capturing your most important moments
+        </p>
+      </motion.header>
+
+      {/* Sections */}
+      <div className="max-w-7xl mx-auto px-6 pb-20 space-y-24">
+        {sections.map((section, sectionIndex) => (
+          <motion.section 
+            key={section.title}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: '-100px' }}
+            className="space-y-8"
           >
-            <img 
-              src={`https://picsum.photos/id/${img.id + 10}/800/1200`} 
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
-              alt={img.title}
-            />
-            <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors flex items-end p-8">
-              <div>
-                <span className="text-xs uppercase tracking-[0.2em] font-bold text-gray-300 mb-1 block">{img.category}</span>
-                <h3 className="text-2xl font-bold">{img.title}</h3>
-              </div>
+            {/* Section Header */}
+            <div className="text-center space-y-2 mb-12">
+              <h2 className="text-5xl md:text-6xl font-bold">{section.title}</h2>
+              <p className="text-gray-400 text-lg">{section.description}</p>
             </div>
-          </motion.div>
+
+            {/* Gallery Grid */}
+            <motion.div 
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: '-100px' }}
+              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+            >
+              {section.images.map((image) => (
+                <motion.div 
+                  key={image.id}
+                  variants={itemVariants}
+                  className="group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
+                >
+                  <img 
+                    src={`https://picsum.photos/id/${image.photoId}/500/500`} 
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                    alt={section.title}
+                  />
+                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-300"></div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.section>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 };
 
