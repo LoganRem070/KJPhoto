@@ -3,22 +3,61 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const PhotoServices: React.FC = () => {
-  const sections = [
+  // Edit your gallery images here
+  const galleryData = [
     {
       title: 'Weddings',
       description: 'Timeless moments on your special day',
-      images: Array.from({ length: 12 }, (_, i) => ({
-        id: 10 + i,
-        photoId: 10 + i * 5,
-      })),
+      images: [
+        { id: 1, photoId: 10 },
+        { id: 2, photoId: 15 },
+        { id: 3, photoId: 20 },
+        { id: 4, photoId: 25 },
+        { id: 5, photoId: 30 },
+        { id: 6, photoId: 35 },
+        { id: 7, photoId: 40 },
+        { id: 8, photoId: 45 },
+        { id: 9, photoId: 50 },
+        { id: 10, photoId: 55 },
+        { id: 11, photoId: 60 },
+        { id: 12, photoId: 65 },
+      ],
     },
     {
       title: 'Sweet 16s',
       description: 'Celebrating a milestone moment',
-      images: Array.from({ length: 12 }, (_, i) => ({
-        id: 100 + i,
-        photoId: 50 + i * 5,
-      })),
+      images: [
+        { id: 1, photoId: 70 },
+        { id: 2, photoId: 75 },
+        { id: 3, photoId: 80 },
+        { id: 4, photoId: 85 },
+        { id: 5, photoId: 90 },
+        { id: 6, photoId: 95 },
+        { id: 7, photoId: 100 },
+        { id: 8, photoId: 105 },
+        { id: 9, photoId: 110 },
+        { id: 10, photoId: 115 },
+        { id: 11, photoId: 120 },
+        { id: 12, photoId: 125 },
+      ],
+    },
+    {
+      title: 'And So Much More',
+      description: 'Beyond the ordinary',
+      images: [
+        { id: 1, photoId: 130 },
+        { id: 2, photoId: 135 },
+        { id: 3, photoId: 140 },
+        { id: 4, photoId: 145 },
+        { id: 5, photoId: 150 },
+        { id: 6, photoId: 155 },
+        { id: 7, photoId: 160 },
+        { id: 8, photoId: 165 },
+        { id: 9, photoId: 170 },
+        { id: 10, photoId: 175 },
+        { id: 11, photoId: 180 },
+        { id: 12, photoId: 185 },
+      ],
     },
   ];
 
@@ -64,7 +103,7 @@ const PhotoServices: React.FC = () => {
 
       {/* Sections */}
       <div className="max-w-7xl mx-auto px-6 pb-20 space-y-24">
-        {sections.map((section, sectionIndex) => (
+        {galleryData.map((section, sectionIndex) => (
           <motion.section 
             key={section.title}
             initial={{ opacity: 0, y: 40 }}

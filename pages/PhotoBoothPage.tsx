@@ -108,26 +108,25 @@ const PhotoBoothPage: React.FC = () => {
           className="text-gray-400 mt-8 max-w-2xl text-xl font-light"
         >
           Elevate your event with our premium interactive photo booth solutions. From classic prints to 360 cinematic videos. 
-          All of our booths come with an on site Attendant and a suitcase of luxury props.
         </motion.p>
       </header>
 
       <div className="space-y-32 pb-32">
-        {/* Normal Tier - Ring Light Stand */}
+        {/* Roamer */}
         <ParallaxSection 
           subtitle="$999"
           title="ROAMER"
-          description="Our most versatile and sleek option. Perfect for weddings and social parties where aesthetics matter most."
-          features={["Digital Sharing", "Standard Props", "LED Ring Light"]}
+          description="Let the photo booth come to you! Our compact and portable ring light is perfect for any event, delivering high-quality photos on the go."
+          features={["Digital Sharing", "LED Ring Light", "Custom Overlays", "Dedicated Attendant"]}
           imageSrc="https://github.com/LoganRem070/KJPhoto/blob/main/assets/Roamer.png?raw=true" 
         />
 
-        {/* Premium Tier - Boxy Standalone */}
+        {/* IPad Booth */}
         <ParallaxSection 
           subtitle="$999"
           title="IPAD PHOTO BOOTH"
-          description="A professional-grade standalone kiosk with built-in printing and high-speed processing. The gold standard for corporate events."
-          features={["DSLR Quality", "Instant Printing", "Customized Branding", "Attendant Included"]}
+          description="Capture the moment with our sleek iPad photo booth. Just grab a prop and pose and our attendant will handle the rest."
+          features={["Instant Printing", "Luxury Prop Suitcase", "Album of all Prints", "Dedicated Attendant"]}
           imageSrc="https://github.com/LoganRem070/KJPhoto/blob/main/assets/IPadBooth.png?raw=true"
           reverse
         />
@@ -136,8 +135,8 @@ const PhotoBoothPage: React.FC = () => {
         <ParallaxSection 
           subtitle="$999"
           title="DSLR CAMERA BOOTH"
-          description="A full-length interactive mirror that communicates with guests through touch and animations. Elegant and engaging."
-          features={["Full Length Photos", "Touch Screen Interface", "Interactive Animations", "Luxury Prop Kit"]}
+          description="The gold standard for any event. Our DSLR camera booth offers stunning image quality and an interactive experience your guests will love."
+          features={["Instant Printing", "Luxury Prop Suitcase", "Album of all Prints", "Dedicated Attendant"]}
           imageSrc="https://github.com/LoganRem070/KJPhoto/blob/main/assets/DSLRBooth.png?raw=true"
         />
 
@@ -145,7 +144,7 @@ const PhotoBoothPage: React.FC = () => {
         <ParallaxSection 
           subtitle="$999"
           title="360 VIDEO EXPERIENCE"
-          description="The ultimate showstopper. High-speed cinematic video captures every angle of the excitement in stunning slow motion."
+          description="The ultimate showstopper. Stand still and let the camera spin around you to capture stunning slow-motion videos that will leave your guests in awe."
           features={["Slow-Motion Video", "Overlay FX", "LED Base", "Same Day Text / Email Delivery"]}
           imageSrc="https://github.com/LoganRem070/KJPhoto/blob/main/assets/Fake360.png?raw=true"
           reverse
