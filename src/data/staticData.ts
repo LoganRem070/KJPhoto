@@ -271,8 +271,8 @@ export const HIGHLIGHTS_DATA: HighlightVideoItem[] = [
     location: `Leonard's`,
     year: '2025',
     description: 'Description',
-    videoUrl: 'https://lqdohcks15daxrhz.public.blob.vercel-storage.com/Highlights/Fixed%201-5-25.mp4',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1200'
+    videoUrl: 'https://pub-744e03c4b6a343e88ee29b47368f398d.r2.dev/0521(1).mp4',
+    thumbnailUrl: new URL('../assets/kjLoading.png', import.meta.url).href
   },
   {
     id: 'h-cathedral-symphony',
@@ -282,8 +282,8 @@ export const HIGHLIGHTS_DATA: HighlightVideoItem[] = [
     location: 'Metropolitan Cathedral',
     year: '2025',
     description: 'High-ceiling dramatic arches meet soft orchestral details. A majestic teaser highlighting high-contrast black tie looks and grand architectural views.',
-    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-bride-holding-a-bouquet-41135-large.mp4',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1200'
+    videoUrl: 'https://docs.google.com/uc?export=download&id=1Le6GGzEr-e79XroSHN7WLfr3rhH1nnfm',
+    thumbnailUrl: new URL('../assets/kjLoading.png', import.meta.url).href
   },
   {
     id: 'h-garden-elegance',
@@ -293,7 +293,7 @@ export const HIGHLIGHTS_DATA: HighlightVideoItem[] = [
     location: 'Estate Glass Greenhouse',
     year: '2024',
     description: 'Wrapped in beautiful geometric diffusion under a glass roof. Capturing pristine modern layout design, manicured green garden walks, and quiet shared glances.',
-    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-the-groom-waiting-for-victory-41134-large.mp4',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1473177104440-ffee2f376098?auto=format&fit=crop&q=80&w=1200'
+    videoUrl: 'https://youtu.be/Ir4DpA42ycQ',
+    thumbnailUrl: new URL('../assets/kjLoading.png', import.meta.url).href
   }
 ];

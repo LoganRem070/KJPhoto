@@ -199,7 +199,7 @@ export default function HomeView({ setView }: HomeViewProps) {
             
             <div className="h-6 flex items-center justify-center">
               <span className="font-sans text-[11px] sm:text-xs tracking-[0.25em] text-luxury-accent font-medium uppercase">
-                Wedding &bull; Portrait &bull; Sweet 16 &bull; Cultural Celebrations
+                Wedding's &bull; Sweet 16's &bull; Quinceanera's &bull; Corporate Event's &bull; And More!
               </span>
             </div>
 
@@ -239,7 +239,7 @@ export default function HomeView({ setView }: HomeViewProps) {
             <div className="absolute inset-0 z-0 overflow-hidden">
               <img
                 src="/src/assets/images/wedding_hero_epic_1779305565255.png"
-                alt="Weddings Collection"
+                alt="Photography"
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 referrerPolicy="no-referrer"
               />
@@ -248,16 +248,16 @@ export default function HomeView({ setView }: HomeViewProps) {
 
             <div className="relative z-20 w-full transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
               <span className="text-luxury-accent font-sans text-[10px] tracking-[0.3em] uppercase block mb-1">
-                Portfolio
+                Gallery
               </span>
               <h3 className="font-serif text-2xl tracking-widest text-[#fff] uppercase group-hover:text-luxury-accent transition-colors duration-300">
-                Wedding Stories
+                Photography
               </h3>
               <p className="font-sans text-xs text-luxury-muted mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 leading-relaxed">
-                Timeless Fine-Art digital negatives, romantic lighting profiles, and emotional high-fidelity video captures.
+                Timeless fine-art photography with romantic lighting and emotional, high-fidelity images.
               </p>
               <div className="mt-4 flex items-center gap-1.5 text-[11px] tracking-widest text-luxury-accent uppercase font-medium">
-                <span>View Collection</span>
+                <span>View Gallery</span>
                 <ArrowRight size={12} className="transform group-hover:translate-x-1.5 transition-transform" />
               </div>
             </div>
@@ -287,16 +287,16 @@ export default function HomeView({ setView }: HomeViewProps) {
 
             <div className="relative z-20 w-full transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
               <span className="text-luxury-accent font-sans text-[10px] tracking-[0.3em] uppercase block mb-1">
-                Gala Portraiture
+                Highlights
               </span>
               <h3 className="font-serif text-2xl tracking-widest text-[#fff] uppercase group-hover:text-luxury-accent transition-colors duration-300">
-                Sweet 16
+                Cinematography
               </h3>
               <p className="font-sans text-xs text-luxury-muted mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 leading-relaxed">
-                Refined, couture portraits modeling youthful majesty, vibrant dance coverage, and dynamic multi-angle shoots.
+                Elegant video storytelling, capturing cinematic angles, vibrant dance coverage, and unforgettable emotional moments.
               </p>
               <div className="mt-4 flex items-center gap-1.5 text-[11px] tracking-widest text-luxury-accent uppercase font-medium">
-                <span>View Collection</span>
+                <span>View Highlights</span>
                 <ArrowRight size={12} className="transform group-hover:translate-x-1.5 transition-transform" />
               </div>
             </div>
@@ -326,13 +326,13 @@ export default function HomeView({ setView }: HomeViewProps) {
 
             <div className="relative z-20 w-full transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
               <span className="text-luxury-accent font-sans text-[10px] tracking-[0.3em] uppercase block mb-1">
-                Luxury Activation
+                Experiences
               </span>
               <h3 className="font-serif text-2xl tracking-widest text-[#fff] uppercase group-hover:text-luxury-accent transition-colors duration-300">
                 Photobooths
               </h3>
               <p className="font-sans text-xs text-luxury-muted mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 leading-relaxed">
-                Vogue studio stations, fast-print systems, 360 cinematic rotations, and vintage recorded telephone registry slots.
+                Every type of booth experience from open air print booths to 360 video experiences, all custom designed to match your event's aesthetic and theme.
               </p>
               <div className="mt-4 flex items-center gap-1.5 text-[11px] tracking-widest text-luxury-accent uppercase font-medium">
                 <span>View Offerings</span>

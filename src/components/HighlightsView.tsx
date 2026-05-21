@@ -3,6 +3,45 @@ import { HIGHLIGHTS_DATA } from '../data/staticData';
 import { Volume2, VolumeX, Film, Clock, Sparkles } from 'lucide-react';
 import { motion } from 'motion/react';
 
+type EmbeddedVideo = {
+  type: 'video' | 'youtube' | 'streamable' | 'unknown';
+  src: string;
+};
+
+const getEmbeddedVideo = (url: string): EmbeddedVideo => {
+  const youtubeMatch = url.match(
+    /(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/))([A-Za-z0-9_-]{11})/
+  );
+  if (youtubeMatch) {
+    const id = youtubeMatch[1];
+    return {
+      type: 'youtube',
+      src: `https://www.youtube.com/embed/${id}?rel=0&showinfo=0&autoplay=1&mute=1&loop=1&playlist=${id}`,
+    };
+  }
+
+  const streamableMatch = url.match(/streamable\.com\/(?:[a-zA-Z0-9]+)(?:\/.*)?$/);
+  if (streamableMatch) {
+    const id = url.split('/').pop();
+    return {
+      type: 'streamable',
+      src: `https://streamable.com/e/${id}`,
+    };
+  }
+
+  if (url.match(/\.(mp4|webm|ogg)(\?.*)?$/i)) {
+    return {
+      type: 'video',
+      src: url,
+    };
+  }
+
+  return {
+    type: 'unknown',
+    src: url,
+  };
+};
+
 export default function HighlightsView() {
   const [mutedStates, setMutedStates] = useState<Record<string, boolean>>({
     'h-eternal-sunset': true,
@@ -39,7 +78,7 @@ export default function HighlightsView() {
           </h1>
           <div className="w-12 h-[1px] bg-luxury-accent mx-auto" />
           <p className="font-sans text-xs sm:text-sm text-luxury-muted max-w-xl mx-auto mt-6 tracking-wide leading-relaxed">
-            Unraveling emotion through fluid high-definition motion. We construct bespoke, couture wedding films that preserve sound, light, and laughter in absolute clarity. All films are captured in stunning cinematic 4K quality.
+            Unraveling emotion through fluid high-definition motion. We construct bespoke, couture wedding films that preserve sound, light, and laughter in absolute clarity.
           </p>
         </section>
 
@@ -59,15 +98,44 @@ export default function HighlightsView() {
                   className="w-full overflow-hidden bg-black/45 outline outline-white/5 relative aspect-[14/9] sm:aspect-[16/10] md:aspect-[21/9] shadow-[0_20px_50px_rgba(0,0,0,0.8)] cursor-default group-hover:outline-luxury-accent/30 transition-all duration-[600ms]"
                 >
                   {/* Background loop video to add expensive life and animation */}
-                  <video
-                    src={item.videoUrl}
-                    poster={item.thumbnailUrl}
-                    autoPlay
-                    loop
-                    muted={isMuted}
-                    playsInline
-                    className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-101 filter brightness-[0.8] group-hover:brightness-[0.95]"
-                  />
+                  {(() => {
+                    const embed = getEmbeddedVideo(item.videoUrl);
+
+                    if (embed.type === 'video') {
+                      return (
+                        <video
+                          src={embed.src}
+                          poster={item.thumbnailUrl}
+                          autoPlay
+                          loop
+                          muted={isMuted}
+                          playsInline
+                          className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-101 filter brightness-[0.8] group-hover:brightness-[0.95]"
+                        />
+                      );
+                    }
+
+                    if (embed.type === 'youtube' || embed.type === 'streamable') {
+                      return (
+                        <iframe
+                          src={embed.src}
+                          title={item.title}
+                          allow="autoplay; encrypted-media; picture-in-picture"
+                          allowFullScreen
+                          loading="lazy"
+                          className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-101 filter brightness-[0.8] group-hover:brightness-[0.95]"
+                        />
+                      );
+                    }
+
+                    return (
+                      <div className="w-full h-full flex items-center justify-center bg-black">
+                        <p className="text-white text-sm text-center px-6">
+                          Unable to preview this video type. Open the link to view it.
+                        </p>
+                      </div>
+                    );
+                  })()}
 
                   {/* High Quality Overlay Controls - Audio Switch Only */}
                   <div className="absolute top-6 right-6 z-20 flex items-center gap-3">
@@ -126,7 +194,7 @@ export default function HighlightsView() {
             A Cinematic Heirloom.
           </h3>
           <p className="font-sans text-xs sm:text-sm text-luxury-muted italic mt-2 tracking-wide">
-            Framing every speech, glance, and laughter in pristine 4K cinematic gold standard.
+            Framing every speech, glance, and laughter in a cinematic gold standard.
           </p>
         </section>
 

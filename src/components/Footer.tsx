@@ -61,11 +61,11 @@ export default function Footer({ setView }: FooterProps) {
           </a>
           
           <a
-            href="tel:+15550192834"
+            href="tel:+5164760898"
             className="flex items-center gap-2 hover:text-luxury-accent transition-colors py-1 group"
           >
             <Phone size={16} className="text-luxury-accent/60 group-hover:scale-110 transition-transform" />
-            <span>+1 (555) 019-2834</span>
+            <span>+1 (516) 476-0898</span>
           </a>
 
           <a
