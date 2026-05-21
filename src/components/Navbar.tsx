@@ -156,7 +156,7 @@ export default function Navbar({ currentView, setView }: NavbarProps) {
                   Based in NY • Available Worldwide
                 </span>
                 <span className="text-xs text-luxury-accent font-serif italic">
-                  starwarsrebels75@gmail.com
+                  kandjphoto@yahoo.com
                 </span>
               </div>
             </div>

@@ -53,11 +53,11 @@ export default function Footer({ setView }: FooterProps) {
         {/* Contact Links */}
         <div className="flex flex-col md:flex-row items-center gap-y-4 md:gap-x-12 mb-10 text-sm font-sans tracking-wide text-luxury-muted">
           <a
-            href="mailto:starwarsrebels75@gmail.com"
+            href="mailto:kandjphoto@yahoo.com"
             className="flex items-center gap-2 hover:text-luxury-accent transition-colors py-1 group"
           >
             <Mail size={16} className="text-luxury-accent/60 group-hover:scale-110 transition-transform" />
-            <span>starwarsrebels75@gmail.com</span>
+            <span>kandjphoto@yahoo.com</span>
           </a>
           
           <a

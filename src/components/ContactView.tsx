@@ -33,7 +33,7 @@ export default function ContactView() {
           {/* Email Block */}
           <motion.a
             id="contact-email-link"
-            href="mailto:starwarsrebels75@gmail.com"
+            href="mailto:kandjphoto@yahoo.com"
             whileHover={{ y: -4 }}
             className="block p-8 border border-white/5 bg-zinc-950/40 hover:border-luxury-accent/50 transition-all duration-300 group rounded-none"
           >
@@ -43,7 +43,7 @@ export default function ContactView() {
               </div>
               <span className="text-[9px] font-mono text-luxury-muted tracking-[0.3em] uppercase mt-2">WRITE TO PRINCIPALS</span>
               <span className="text-lg sm:text-xl tracking-wide text-luxury-fg group-hover:text-luxury-accent transition-colors font-mono font-medium block mt-1 break-all">
-                starwarsrebels75@gmail.com
+                kandjphoto@yahoo.com
               </span>
             </div>
           </motion.a>
