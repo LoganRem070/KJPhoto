@@ -65,7 +65,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: 'cultural',
     title: 'Vows of Red & Rich Gold',
     description: 'Intricate traditional South Asian silk embroidery meets timeless candlelit vows.',
-    src: '/src/assets/images/asian_wedding_ceremony_1779305621329.png',
+    src: new URL('../assets/images/asian_wedding_ceremony_1779305621329.png', import.meta.url).href,
     location: 'Taj Jai Mahal Palace',
     year: '2025'
   },
