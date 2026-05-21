@@ -100,7 +100,7 @@ export default function PhotoboothView({ setView }: PhotoboothViewProps) {
                 <div className="w-full lg:w-5/12 flex flex-col justify-center space-y-6">
                   
                   <div className="flex items-center gap-2 text-luxury-accent text-xs font-mono tracking-widest uppercase">
-                    <span>0{idx + 1} // EXPERIMENTAL SYSTEM</span>
+                    <span>BOOTH 0{idx + 1}</span>
                   </div>
 
                   <h2 className="font-serif text-3xl sm:text-4xl text-luxury-fg tracking-wide font-medium uppercase leading-tight">

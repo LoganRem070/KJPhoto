@@ -1,3 +1,4 @@
+import src from 'gsap-trial/src/index';
 import { GalleryItem, PhotoboothOffering, PackageDetails, HighlightVideoItem } from '../types';
 
 export const GALLERY_ITEMS: GalleryItem[] = [
@@ -264,13 +265,13 @@ export const PACKAGES_DATA: PackageDetails[] = [
 export const HIGHLIGHTS_DATA: HighlightVideoItem[] = [
   {
     id: 'h-eternal-sunset',
-    title: 'An Intimate Golden Horizon',
-    category: 'Cinematic Highlight Film',
-    duration: '4:15',
-    location: 'Amalfi Coast, Italy',
+    title: 'Rafia & Abdullah',
+    category: 'Wedding',
+    duration: '3:27',
+    location: `Leonard's`,
     year: '2025',
-    description: 'A visual-emotional poem capturing the soft twilight sea breezes, elegant candlelit cliffside dinners, and the electric joy of an intimate Italian destination wedding.',
-    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-wedding-couple-dancing-slowly-41136-large.mp4',
+    description: 'Description',
+    videoUrl: 'https://lqdohcks15daxrhz.public.blob.vercel-storage.com/Highlights/Fixed%201-5-25.mp4',
     thumbnailUrl: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1200'
   },
   {

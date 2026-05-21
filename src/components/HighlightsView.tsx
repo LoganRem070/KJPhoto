@@ -79,7 +79,7 @@ export default function HighlightsView() {
                       title={isMuted ? "Unmute Ambient Sound" : "Mute Sound"}
                     >
                       {isMuted ? <VolumeX size={14} className="text-luxury-accent" /> : <Volume2 size={14} className="text-white" />}
-                      <span className="hidden sm:inline">{isMuted ? "Unmute" : "Muted"}</span>
+                      <span className="hidden sm:inline">{isMuted ? "Unmute" : "Mute"}</span>
                     </button>
                   </div>
 
@@ -103,13 +103,13 @@ export default function HighlightsView() {
                     </div>
                   </div>
 
-                  {/* Corner status tag */}
+                  {/* Corner status tag
                   <div className="absolute bottom-6 right-6 z-20 hidden sm:flex items-center gap-2 bg-[#0c0c0c]/80 border border-white/10 px-3 py-1.5 backdrop-blur-sm pointer-events-none">
                     <span className="w-1.5 h-1.5 rounded-full bg-luxury-accent animate-pulse" />
                     <span className="text-[9px] font-mono tracking-[0.2em] text-luxury-fg uppercase">
                       LIVE TEASER LOOP
                     </span>
-                  </div>
+                  </div>*/}
 
                 </div>
               </div>
