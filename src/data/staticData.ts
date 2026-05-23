@@ -6,28 +6,28 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'w1',
     category: 'weddings',
-    title: 'An Intimate Horizon',
+    title: 'Flowing Veil',
     description: 'An editorial cinematic embrace at golden hour, suspended in quiet grandeur on the cliffs.',
-    src: '/src/assets/images/wedding_hero_epic_1779305565255.png',
-    location: 'Amalfi Coast Sunset',
-    year: '2025'
+    src: new URL('../assets/images/Wed_2.jpg', import.meta.url).href,
+    location: 'The Garden',
+    year: '2024'
   },
   {
     id: 'w2',
     category: 'weddings',
-    title: 'Symphony in the Cathedral',
+    title: 'Leaves All Around',
     description: 'Spacious high-ceiling architecture reflecting soft dramatic backlighting on a glowing walk-down.',
-    src: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1200',
-    location: 'St. Patrick Cathedral',
-    year: '2025'
+    src: new URL('../assets/images/Wed_1.jpg', import.meta.url).href,
+    location: 'The Great Outdoors',
+    year: '2022'
   },
   {
     id: 'w3',
     category: 'weddings',
-    title: 'The Tender Bloom',
+    title: 'The Rolls Royce',
     description: 'An elegant black and white candid exchange, capturing pure, unfiltered happiness.',
-    src: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=1200',
-    location: 'Château de Sceaux',
+    src: new URL('../assets/images/Wed_3.jpg', import.meta.url).href,
+    location: "Leonard's",
     year: '2024'
   },
   
@@ -35,29 +35,29 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 's1',
     category: 'sweet16',
-    title: 'The Ballgown Serenade',
-    description: 'A sophisticated premium Sweet 16 celebration portrait, framed with soft romantic candlelight in a luxury ballroom.',
-    src: '/src/assets/images/sweet_16_editorial_1779305589321.png',
-    location: 'The Ritz Carlton',
-    year: '2025'
+    title: 'Elegance Redefined',
+    description: 'A crisp modern glamour portrait focusing on the massive city skyline and the subject’s poised elegance, captured in a high-fashion editorial style.',
+    src: new URL('../assets/images/S16_1.jpg', import.meta.url).href,
+    location: 'New York City',
+    year: '2024'
   },
   {
     id: 's2',
     category: 'sweet16',
-    title: 'Elegance Redefined',
-    description: 'A crisp modern glamour portrait focusing on micro-details, elegant tiara, and radiant confidence.',
-    src: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=1200',
-    location: 'Gramercy Penthouse',
-    year: '2025'
+    title: 'Pose of the Party',
+    description: 'A sophisticated premium Sweet 16 celebration portrait, framed with soft romantic candlelight in a luxury ballroom.',
+    src: new URL('../assets/images/S16_4.jpg', import.meta.url).href,
+    location: "Leonard's",
+    year: '2024'
   },
   {
     id: 's3',
     category: 'sweet16',
-    title: 'Chandelier Dreams',
-    description: 'Capturing the golden glow of cascading crystals reflecting on luxury celebration details.',
-    src: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80&w=1200',
-    location: 'The Plaza Hotel',
-    year: '2024'
+    title: 'Eternal Friendship',
+    description: 'Friends laughing and enjoying the night, captured in a candid moment of pure joy and connection.',
+    src: new URL('../assets/images/S16_2.jpg', import.meta.url).href,
+    location: "Leonard's",
+    year: '2025'
   },
 
   // Cultural Weddings Section
