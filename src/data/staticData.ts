@@ -8,7 +8,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: 'weddings',
     title: 'Flowing Veil',
     description: 'An editorial cinematic embrace at golden hour, suspended in quiet grandeur on the cliffs.',
-    src: new URL('../assets/images/Wed_2.jpg', import.meta.url).href,
+    src: new URL('../assets/images/Wed_2.JPG', import.meta.url).href,
     location: 'The Garden',
     year: '2024'
   },
@@ -17,7 +17,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: 'weddings',
     title: 'Leaves All Around',
     description: 'Spacious high-ceiling architecture reflecting soft dramatic backlighting on a glowing walk-down.',
-    src: new URL('../assets/images/Wed_1.jpg', import.meta.url).href,
+    src: new URL('../assets/images/Wed_1.JPG', import.meta.url).href,
     location: 'The Great Outdoors',
     year: '2022'
   },
@@ -26,7 +26,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: 'weddings',
     title: 'The Rolls Royce',
     description: 'An elegant black and white candid exchange, capturing pure, unfiltered happiness.',
-    src: new URL('../assets/images/Wed_3.jpg', import.meta.url).href,
+    src: new URL('../assets/images/Wed_3.JPG', import.meta.url).href,
     location: "Leonard's",
     year: '2024'
   },
@@ -37,7 +37,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: 'sweet16',
     title: 'Elegance Redefined',
     description: 'A crisp modern glamour portrait focusing on the massive city skyline and the subject’s poised elegance, captured in a high-fashion editorial style.',
-    src: new URL('../assets/images/S16_1.jpg', import.meta.url).href,
+    src: new URL('../assets/images/S16_1.JPG', import.meta.url).href,
     location: 'New York City',
     year: '2024'
   },
@@ -46,7 +46,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: 'sweet16',
     title: 'Pose of the Party',
     description: 'A sophisticated premium Sweet 16 celebration portrait, framed with soft romantic candlelight in a luxury ballroom.',
-    src: new URL('../assets/images/S16_4.jpg', import.meta.url).href,
+    src: new URL('../assets/images/S16_4.JPG', import.meta.url).href,
     location: "Leonard's",
     year: '2024'
   },
