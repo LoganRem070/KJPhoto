@@ -60,13 +60,13 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     year: '2025'
   },
 
-  // Cultural Weddings Section
+  // South Asian
   {
     id: 'c1',
     category: 'cultural',
     title: 'Vows of Red & Rich Gold',
     description: 'Intricate traditional South Asian silk embroidery meets timeless candlelit vows.',
-    src: new URL('../assets/images/asian_wedding_ceremony_1779305621329.png', import.meta.url).href,
+    src: new URL('../assets/images/SouthAsian_1.jpg', import.meta.url).href,
     location: 'Taj Jai Mahal Palace',
     year: '2025'
   },
@@ -75,7 +75,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: 'cultural',
     title: 'Ritual of Sacred Flame',
     description: 'Raw, emotional documentation of standard ancestral marriage circles, amidst rising fragrant smoke.',
-    src: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=1200',
+    src: new URL('../assets/images/SouthAsian_2.JPG', import.meta.url).href,
     location: 'Royal Udaipur Courtyard',
     year: '2025'
   },
@@ -86,7 +86,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: 'engagements',
     title: 'The Whispering Pines',
     description: 'An elegant outdoor getaway, highlighting natural smiles and the contrast of forest shadow.',
-    src: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1200',
+    src: new URL('../assets/images/SouthAsian_3.JPG', import.meta.url).href,
     location: 'Pacific Northwest Cliffs',
     year: '2025'
   },
@@ -276,13 +276,13 @@ export const HIGHLIGHTS_DATA: HighlightVideoItem[] = [
   },
   {
     id: 'h-cathedral-symphony',
-    title: 'Cathedral Symphony & Dance',
-    category: 'Epic Wedding Teaser',
-    duration: '1:45',
-    location: 'Metropolitan Cathedral',
+    title: 'Angie & Jr',
+    category: 'Wedding',
+    duration: '1:08',
+    location: "Leonard's",
     year: '2025',
-    description: 'High-ceiling dramatic arches meet soft orchestral details. A majestic teaser highlighting high-contrast black tie looks and grand architectural views.',
-    videoUrl: 'https://docs.google.com/uc?export=download&id=1Le6GGzEr-e79XroSHN7WLfr3rhH1nnfm',
+    description: 'desc',
+    videoUrl: 'https://pub-744e03c4b6a343e88ee29b47368f398d.r2.dev/Epic%20Hilight%201%20Angie%20%26%20Jr%2010-11-25.mp4',
     thumbnailUrl: new URL('../assets/kjLoading.png', import.meta.url).href
   },
   {
