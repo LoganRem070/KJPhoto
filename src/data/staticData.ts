@@ -79,19 +79,19 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     location: 'Royal Udaipur Courtyard',
     year: '2025'
   },
-
-  // Engagements Section
   {
-    id: 'e1',
-    category: 'engagements',
+    id: 'c3',
+    category: 'cultural',
     title: 'The Whispering Pines',
     description: 'An elegant outdoor getaway, highlighting natural smiles and the contrast of forest shadow.',
     src: new URL('../assets/images/SouthAsian_3.JPG', import.meta.url).href,
     location: 'Pacific Northwest Cliffs',
     year: '2025'
   },
+
+//engagments
   {
-    id: 'e2',
+    id: 'e1',
     category: 'engagements',
     title: 'Amber Twilight Run',
     description: 'A dynamic, movement-infused silhouette dance as the warm tide glides over footprints.',
