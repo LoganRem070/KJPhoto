@@ -232,7 +232,7 @@ export default function HomeView({ setView }: HomeViewProps) {
           >
             <div className="absolute inset-0 z-0 overflow-hidden">
               <img
-                src= new URL('../assets/images/WeddingTitle.jpg', import.meta.url).href,
+                src={new URL('../assets/images/WeddingTitle.jpg', import.meta.url).href},
                 alt="Photography"
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 referrerPolicy="no-referrer"
