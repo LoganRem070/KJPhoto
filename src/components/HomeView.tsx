@@ -27,7 +27,7 @@ const HERO_SLIDES = [
     tagline: 'PREMIUM SWEET 16 EDITORIAL',
   },
   {
-    image: '/src/assets/images/asian_wedding_ceremony_1779305621329.png',
+    image: new URL('../assets/images/Main_3.jpg', import.meta.url).href,
     title: 'Vibrant Splendor',
     subtitle: 'Traditional Rituals Custom Styled',
     tagline: 'CULTURAL ANCESTRAL CELEBRATIONS',
@@ -271,7 +271,7 @@ export default function HomeView({ setView }: HomeViewProps) {
           >
             <div className="absolute inset-0 z-0 overflow-hidden">
               <img
-                src="/src/assets/images/sweet_16_editorial_1779305589321.png"
+                src={new URL('../assets/images/VideoTitle.jpg', import.meta.url).href}
                 alt="Sweet 16 Collection"
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 referrerPolicy="no-referrer"
