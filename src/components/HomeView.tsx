@@ -9,19 +9,19 @@ interface HomeViewProps {
 
 const HERO_SLIDES = [
   {
-    image: '/src/assets/images/wedding_hero_epic_1779305565255.png',
+    image: new URL('../assets/images/Main_0.jpg', import.meta.url).href,
     title: 'K&J Photography',
     subtitle: 'Capturing Moments That Last Forever',
     tagline: 'LUXURY FINE-ART DOCUMENTARY',
   },
   {
-    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1600',
+    image: new URL('../assets/images/Main_1.jpg', import.meta.url).href,
     title: 'Timeless Legacies',
     subtitle: 'Preserving Sacred & Sincere Vows',
     tagline: 'CATHEDRALS & SACRED SPACES',
   },
   {
-    image: '/src/assets/images/sweet_16_editorial_1779305589321.png',
+    image: new URL('../assets/images/Main_2.jpg', import.meta.url).href,
     title: 'The Debut Gaze',
     subtitle: 'Elegant Celebrations of Growth',
     tagline: 'PREMIUM SWEET 16 EDITORIAL',
@@ -31,12 +31,6 @@ const HERO_SLIDES = [
     title: 'Vibrant Splendor',
     subtitle: 'Traditional Rituals Custom Styled',
     tagline: 'CULTURAL ANCESTRAL CELEBRATIONS',
-  },
-  {
-    image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1600',
-    title: 'Skyline Reflections',
-    subtitle: 'Aesthetically Framed Celebrations',
-    tagline: 'LUXURY OUTDOOR CONSERVATORIES',
   }
 ];
 
