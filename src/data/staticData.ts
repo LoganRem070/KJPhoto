@@ -264,17 +264,6 @@ export const PACKAGES_DATA: PackageDetails[] = [
 
 export const HIGHLIGHTS_DATA: HighlightVideoItem[] = [
   {
-    id: 'h-eternal-sunset',
-    title: 'Rafia & Abdullah',
-    category: 'Wedding',
-    duration: '3:27',
-    location: `Leonard's`,
-    year: '2025',
-    description: 'Description',
-    videoUrl: 'https://pub-744e03c4b6a343e88ee29b47368f398d.r2.dev/0521(1).mp4',
-    thumbnailUrl: new URL('../assets/kjLoading.png', import.meta.url).href
-  },
-  {
     id: 'h-cathedral-symphony',
     title: 'Angie & Jr',
     category: 'Wedding',
@@ -287,13 +276,24 @@ export const HIGHLIGHTS_DATA: HighlightVideoItem[] = [
   },
   {
     id: 'h-garden-elegance',
-    title: 'The Glass Conservatory Vows',
-    category: 'Editorial Highlight Film',
-    duration: '3:50',
-    location: 'Estate Glass Greenhouse',
+    title: "Brianna's Quinceanera",
+    category: 'Quinceanera',
+    duration: '1:04',
+    location: "Leonard's",
     year: '2024',
-    description: 'Wrapped in beautiful geometric diffusion under a glass roof. Capturing pristine modern layout design, manicured green garden walks, and quiet shared glances.',
-    videoUrl: 'https://youtu.be/Ir4DpA42ycQ',
+    description: 'desc.',
+    videoUrl: 'https://pub-744e03c4b6a343e88ee29b47368f398d.r2.dev/Epic%20Video%20Highlight%204-25-26(1).mp4',
+    thumbnailUrl: new URL('../assets/kjLoading.png', import.meta.url).href
+  },
+  {
+    id: 'h-eternal-sunset',
+    title: 'Rafia & Abdullah',
+    category: 'Wedding',
+    duration: '3:27',
+    location: `Leonard's`,
+    year: '2025',
+    description: 'Description',
+    videoUrl: 'https://pub-744e03c4b6a343e88ee29b47368f398d.r2.dev/0521(1).mp4',
     thumbnailUrl: new URL('../assets/kjLoading.png', import.meta.url).href
   }
 ];
