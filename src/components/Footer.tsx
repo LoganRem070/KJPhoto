@@ -69,13 +69,13 @@ export default function Footer({ setView }: FooterProps) {
           </a>
 
           <a
-            href="https://instagram.com"
+            href="https://instagram.com/kandjphotovideo"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 hover:text-luxury-accent transition-colors py-1 group"
           >
             <Instagram size={16} className="text-luxury-accent/60 group-hover:scale-110 transition-transform" />
-            <span>@kj.photography</span>
+            <span>@kandjphotovideo</span>
           </a>
         </div>
 

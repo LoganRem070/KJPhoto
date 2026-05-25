@@ -61,7 +61,7 @@ export default function ContactView() {
               </div>
               <span className="text-[9px] font-mono text-luxury-muted tracking-[0.3em] uppercase mt-2">DIRECT TELEPHONY</span>
               <span className="text-lg sm:text-xl tracking-wide text-luxury-fg group-hover:text-luxury-accent transition-colors font-mono font-medium block mt-1">
-                +1 (555) 019-2834
+                +1 (516) 476-0898
               </span>
             </div>
           </motion.a>
@@ -69,7 +69,7 @@ export default function ContactView() {
           {/* Instagram Block */}
           <motion.a
             id="contact-instagram-link"
-            href="https://instagram.com"
+            href="https://instagram.com/kandjphotovideo"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ y: -4 }}
@@ -81,7 +81,7 @@ export default function ContactView() {
               </div>
               <span className="text-[9px] font-mono text-luxury-muted tracking-[0.3em] uppercase mt-2">INSTAGRAM SOCIALS</span>
               <span className="text-lg sm:text-xl tracking-wide text-luxury-fg group-hover:text-luxury-accent transition-colors font-mono font-medium block mt-1">
-                @kj.photography
+                @kandjphotovideo
               </span>
             </div>
           </motion.a>
