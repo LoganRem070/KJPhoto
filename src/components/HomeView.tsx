@@ -310,7 +310,7 @@ export default function HomeView({ setView }: HomeViewProps) {
           >
             <div className="absolute inset-0 z-0 overflow-hidden">
               <img
-                src="/src/assets/images/photobooth_vogue_luxury_1779305640420.png"
+                src={new URL('../assets/images/BoothTitle.jpg', import.meta.url).href}
                 alt="Photobooths Offerings"
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 referrerPolicy="no-referrer"
