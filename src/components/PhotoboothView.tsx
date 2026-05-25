@@ -15,8 +15,8 @@ const ICON_MAP: Record<string, React.ReactNode> = {
 const PHOTOBOOTH_IMAGES: Record<string, string> = {
   'pb-vogue': '/src/assets/images/photobooth_vogue_luxury_1779305640420.png',
   'pb-air-digital': 'https://images.unsplash.com/photo-1522158673376-3c72b2280050?auto=format&fit=crop&q=80&w=1200',
-  'pb-air-print': 'https://images.unsplash.com/photo-1517263904008-797480d25147?auto=format&fit=crop&q=80&w=1200',
-  'pb-360-video': 'https://images.unsplash.com/photo-1560169897-fc0cdbdfa4d5?auto=format&fit=crop&q=80&w=1200',
+  'pb-air-print': new URL('../assets/images/OpenAirPrint.jpg', import.meta.url).href,
+  'pb-360-video': new URL('../assets/images/360Booth.jpg', import.meta.url).href,
   'pb-telephone': 'https://images.unsplash.com/photo-1493612276216-ee3925520721?auto=format&fit=crop&q=80&w=1200',
 };
 
