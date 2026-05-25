@@ -218,7 +218,7 @@ export default function HomeView({ setView }: HomeViewProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           
-          {/* weddings Card */}
+          {/* photgraphy Card */}
           <motion.div
             initial={{ opacity: 0, y: 35 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -232,7 +232,7 @@ export default function HomeView({ setView }: HomeViewProps) {
           >
             <div className="absolute inset-0 z-0 overflow-hidden">
               <img
-                src="/src/assets/images/wedding_hero_epic_1779305565255.png"
+                src= new URL('../assets/images/WeddingTitle.jpg', import.meta.url).href,
                 alt="Photography"
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 referrerPolicy="no-referrer"
@@ -257,7 +257,7 @@ export default function HomeView({ setView }: HomeViewProps) {
             </div>
           </motion.div>
 
-          {/* Sweet 16 Card */}
+          {/* cinematorgraphy card */}
           <motion.div
             initial={{ opacity: 0, y: 35 }}
             whileInView={{ opacity: 1, y: 0 }}
