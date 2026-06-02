@@ -156,7 +156,7 @@ export default function HighlightsView() {
                     <span className="text-[10px] sm:text-[11px] font-mono tracking-widest text-[#fff] block uppercase font-semibold">
                       {item.title.toUpperCase()}
                     </span>
-                    <div className="flex items-center gap-3 mt-1 text-[8px] sm:text-[10px] font-sans tracking-[0.1em] text-luxury-accent uppercase">
+                    {/*<div className="flex items-center gap-3 mt-1 text-[8px] sm:text-[10px] font-sans tracking-[0.1em] text-luxury-accent uppercase">
                       <span className="flex items-center gap-1">
                         <Film size={10} />
                         {item.category}
@@ -168,7 +168,7 @@ export default function HighlightsView() {
                       </span>
                       <span>•</span>
                       <span>{item.location}</span>
-                    </div>
+                    </div>*/}
                   </div>
 
                   {/* Corner status tag
