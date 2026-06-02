@@ -13,7 +13,6 @@ export default defineConfig(() => {
     },
     build: {
       // Optimize images and assets
-      minify: 'terser',
       assetsInlineLimit: 8192, // Inline small assets like images < 8KB
       rollupOptions: {
         output: {
