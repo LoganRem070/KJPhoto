@@ -67,7 +67,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Vows of Red & Rich Gold',
     description: 'Intricate traditional South Asian silk embroidery meets timeless candlelit vows.',
     src: new URL('../assets/images/SouthAsian_1_compressed.webp', import.meta.url).href,
-    location: 'Taj Jai Mahal Palace',
+    location: null,
     year: '2025'
   },
   {
@@ -76,8 +76,8 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Ritual of Sacred Flame',
     description: 'Raw, emotional documentation of standard ancestral marriage circles, amidst rising fragrant smoke.',
     src: new URL('../assets/images/SouthAsian_2_compressed.webp', import.meta.url).href,
-    location: 'Royal Udaipur Courtyard',
-    year: '2025'
+    location: null,
+    year: null
   },
   {
     id: 'c3',
@@ -85,8 +85,8 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'The Whispering Pines',
     description: 'An elegant outdoor getaway, highlighting natural smiles and the contrast of forest shadow.',
     src: new URL('../assets/images/SouthAsian_3_compressed.webp', import.meta.url).href,
-    location: 'Pacific Northwest Cliffs',
-    year: '2025'
+    location: null,
+    year: null
   },
 
 //engagments

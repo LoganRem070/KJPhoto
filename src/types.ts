@@ -6,8 +6,8 @@ export interface GalleryItem {
   title: string;
   description: string;
   src: string;
-  location?: string;
-  year?: string;
+  location?: string | null;
+  year?: string | null;
 }
 
 export interface PhotoboothOffering {
