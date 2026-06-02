@@ -224,9 +224,8 @@ export const PACKAGES_DATA: PackageDetails[] = [
     tagline: 'Comprehensive luxury storytelling capturing fine-art details and cinematic movement.',
     details: [
       '8 Hours continuous photographic coverage with Principal and Lead Associates',
-      '8 Hours videographic capture including second multi-angle cinema assistant',
+      '8 Hours continuous videographic coverage by lead documentarian',
       'Bespoke 5-minute premium Highlight Film with hand-selected master score',
-      'Next-day priority teaser set (15 flagship images for immediate sharing)',
       'Full private online download portal and luxury flash drive delivery',
       '600+ signature polished digital negatives'
     ],

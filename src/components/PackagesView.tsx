@@ -11,15 +11,11 @@ interface PackagesViewProps {
 const FAQS = [
   {
     q: 'What is the master file turnaround period?',
-    a: 'Next-day teaser packets (15 highlight negatives) are dispatched within 24 hours. The main comprehensive, hand-graded online high-resolution client portal is fully cataloged and delivered within 6 to 8 weeks following the event.'
+    a: 'These things take time, and we pride ourselves on delivering high-quality results. Once we finish the final edit, your gallery will be available soon.'
   },
   {
     q: 'Do you offer custom tailored packages outside these three tiers?',
     a: 'Indeed. Every celebration holds an individual rhythm. Upon completing your initial inquiry form on our Contact page, we can customize hours of coverage, destination travel splits, second assistants, or multi-day traditional ceremony arrays.'
-  },
-  {
-    q: 'What is the booking deposit policy to secure a date?',
-    a: 'To safeguard your date, we require a signed digital agreement and a 30% retainer fee. The remaining balance is completed 30 days prior to the primary celebration.'
   },
   {
     q: 'Do you deliver unedited RAW camera negatives?',
