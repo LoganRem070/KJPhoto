@@ -244,7 +244,7 @@ export default function GalleryView() {
             <div className="w-full flex items-center justify-between z-10 px-4 pt-4">
               <div className="text-left">
                 <span className="text-xs font-mono text-luxury-accent uppercase tracking-widest">
-                  {selectedImage.quickTitle.toUpperCase()}
+                  {selectedImage.category.toUpperCase()}
                 </span>
                 <h4 className="font-serif text-lg text-luxury-fg uppercase tracking-widest">
                   {selectedImage.title}
