@@ -21,9 +21,9 @@ export default function GalleryView() {
   const portraits = GALLERY_ITEMS.filter(item => item.category === 'portraits');
 
   const sections = [
-    { id: 'weddings-section', title: 'WEDDINGS & ELOPEMENTS', subtitle: 'Sacred ceremonies & fine-art moments', items: weddings },
-    { id: 'sweet-section', title: 'SWEET SIXTEEN GALA', subtitle: 'Youthful majesty & grand portraits', items: sweet16 },
-    { id: 'cultural-section', title: 'ASIAN WEDDING CELEBRATIONS', subtitle: 'Intricate rituals of red and gold masterwork', items: cultural },
+    {quickTitle: "WEDDINGS", id: 'weddings-section', title: 'WEDDINGS & ELOPEMENTS', subtitle: 'Sacred ceremonies & fine-art moments', items: weddings },
+    {quickTitle: "SWEET 16", id: 'sweet-section', title: 'SWEET SIXTEEN GALA', subtitle: 'Youthful majesty & grand portraits', items: sweet16 },
+    {quickTitle: "SOUTH ASIAN", id: 'cultural-section', title: 'SOUTH ASIAN WEDDING CELEBRATIONS', subtitle: 'Intricate rituals of red and gold masterwork', items: cultural },
   ];
 
   useEffect(() => {
@@ -149,7 +149,7 @@ export default function GalleryView() {
             }}
             className="px-4 py-2 border border-white/5 hover:border-luxury-accent text-[10px] tracking-widest uppercase text-luxury-fg/70 hover:text-luxury-accent font-sans transition-all bg-black/40 backdrop-blur-sm cursor-pointer"
           >
-            {sec.title.split(' ')[0]}
+            {sec.quickTitle || sec.title.split(' ')[0]}
           </button>
         ))}
       </div>
