@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ViewType } from '../types';
 import { ArrowRight, ChevronLeft, ChevronRight, Play } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
@@ -36,20 +36,34 @@ const HERO_SLIDES = [
 
 export default function HomeView({ setView }: HomeViewProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const intervalRef = useRef<number | null>(null);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
+  const startAutoRotate = () => {
+    if (intervalRef.current) {
+      window.clearInterval(intervalRef.current);
+    }
+    intervalRef.current = window.setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
     }, 5500);
-    return () => clearInterval(timer);
+  };
+
+  useEffect(() => {
+    startAutoRotate();
+    return () => {
+      if (intervalRef.current) {
+        window.clearInterval(intervalRef.current);
+      }
+    };
   }, []);
 
   const handleNext = () => {
     setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+    startAutoRotate();
   };
 
   const handlePrev = () => {
     setCurrentSlide((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
+    startAutoRotate();
   };
 
   return (
