@@ -95,7 +95,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: 'engagements',
     title: 'Amber Twilight Run',
     description: 'A dynamic, movement-infused silhouette dance as the warm tide glides over footprints.',
-    src: 'https://images.unsplash.com/photo-1482841628122-9080d44bb807?auto=format&fit=crop&q=80&w=1200',
+    src: 'https://images.unsplash.com/photo-1482841628122-9080d44bb807?auto=format&fit=crop&q=75&w=1600&h=900',
     location: 'Malibu Shoreline',
     year: '2024'
   },
@@ -106,7 +106,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: 'portraits',
     title: 'Minimalist Monolith',
     description: 'High-contrast studio portraits with deliberate negative space, emphasizing bone structure and raw gaze.',
-    src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=1200',
+    src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=75&w=1600&h=900',
     location: 'SoHo Daylight Studio',
     year: '2025'
   },
@@ -115,7 +115,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: 'portraits',
     title: 'The Contemporary Poet',
     description: 'Balanced low-key studio lighting portraying executive depth and elegant fashion framing.',
-    src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=1200',
+    src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=75&w=1600&h=900',
     location: 'Brooklyn Red Hook Loft',
     year: '2024'
   }

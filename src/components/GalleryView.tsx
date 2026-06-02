@@ -185,6 +185,7 @@ export default function GalleryView() {
                     <img
                       src={item.src}
                       alt={item.title}
+                      loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-104 filter brightness-[0.85] group-hover:brightness-100"
                       referrerPolicy="no-referrer"
                     />
@@ -273,6 +274,7 @@ export default function GalleryView() {
                 <img
                   src={selectedImage.src}
                   alt={selectedImage.title}
+                  loading="lazy"
                   className="max-w-full max-h-[68vh] object-contain shadow-2xl border border-white/5"
                   referrerPolicy="no-referrer"
                 />

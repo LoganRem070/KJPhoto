@@ -11,6 +11,18 @@ export default defineConfig(() => {
         '@': path.resolve(__dirname, '.'),
       },
     },
+    build: {
+      // Optimize images and assets
+      minify: 'terser',
+      assetsInlineLimit: 8192, // Inline small assets like images < 8KB
+      rollupOptions: {
+        output: {
+          manualChunks: undefined,
+        },
+      },
+      // Enable CSS code splitting
+      cssCodeSplit: true,
+    },
     server: {
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
       // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
