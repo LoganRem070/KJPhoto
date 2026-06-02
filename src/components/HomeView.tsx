@@ -9,25 +9,25 @@ interface HomeViewProps {
 
 const HERO_SLIDES = [
   {
-    image: new URL('../assets/images/Main_0.JPG', import.meta.url).href,
+    image: new URL('../assets/images/Main_0.webp', import.meta.url).href,
     title: 'K&J Photography',
     subtitle: 'Capturing Moments That Last Forever',
     tagline: 'LUXURY FINE-ART DOCUMENTARY',
   },
   {
-    image: new URL('../assets/images/Main_1.jpg', import.meta.url).href,
+    image: new URL('../assets/images/Main_1.webp', import.meta.url).href,
     title: 'Timeless Legacies',
     subtitle: 'Preserving Sacred & Sincere Vows',
     tagline: 'CATHEDRALS & SACRED SPACES',
   },
   {
-    image: new URL('../assets/images/Main_2.jpg', import.meta.url).href,
+    image: new URL('../assets/images/Main_2.webp', import.meta.url).href,
     title: 'The Debut Gaze',
     subtitle: 'Elegant Celebrations of Growth',
     tagline: 'PREMIUM SWEET 16 EDITORIAL',
   },
   {
-    image: new URL('../assets/images/Main_3.jpg', import.meta.url).href,
+    image: new URL('../assets/images/Main_3.webp', import.meta.url).href,
     title: 'Vibrant Splendor',
     subtitle: 'Traditional Rituals Custom Styled',
     tagline: 'CULTURAL ANCESTRAL CELEBRATIONS',
@@ -232,7 +232,7 @@ export default function HomeView({ setView }: HomeViewProps) {
           >
             <div className="absolute inset-0 z-0 overflow-hidden">
               <img
-                src={new URL('../assets/images/WeddingTitle.jpg', import.meta.url).href}
+                src={new URL('../assets/images/WeddingTitle.webp', import.meta.url).href}
                 alt="Photography"
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 referrerPolicy="no-referrer"
@@ -271,7 +271,7 @@ export default function HomeView({ setView }: HomeViewProps) {
           >
             <div className="absolute inset-0 z-0 overflow-hidden">
               <img
-                src={new URL('../assets/images/VideoTitle.jpg', import.meta.url).href}
+                src={new URL('../assets/images/VideoTitle.webp', import.meta.url).href}
                 alt="Sweet 16 Collection"
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 referrerPolicy="no-referrer"
@@ -310,7 +310,7 @@ export default function HomeView({ setView }: HomeViewProps) {
           >
             <div className="absolute inset-0 z-0 overflow-hidden">
               <img
-                src={new URL('../assets/images/BoothTitle.jpg', import.meta.url).href}
+                src={new URL('../assets/images/BoothTitle.webp', import.meta.url).href}
                 alt="Photobooths Offerings"
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 referrerPolicy="no-referrer"
