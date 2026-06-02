@@ -24,8 +24,6 @@ export default function GalleryView() {
     { id: 'weddings-section', title: 'WEDDINGS & ELOPEMENTS', subtitle: 'Sacred ceremonies & fine-art moments', items: weddings },
     { id: 'sweet-section', title: 'SWEET SIXTEEN GALA', subtitle: 'Youthful majesty & grand portraits', items: sweet16 },
     { id: 'cultural-section', title: 'ASIAN WEDDING CELEBRATIONS', subtitle: 'Intricate rituals of red and gold masterwork', items: cultural },
-    { id: 'engagements-section', title: 'CREATIVE ENGAGEMENTS', subtitle: 'Intimate landscapes & glowing embraces', items: engagements },
-    { id: 'portraits-section', title: 'STUDIO & FINE ART PORTRAITURE', subtitle: 'Bold high-contrast minimalist canvases', items: portraits },
   ];
 
   useEffect(() => {
@@ -201,7 +199,8 @@ export default function GalleryView() {
                       </button>
                     </div>
 
-                    {/* Minimalist location & tag tag overlay on corners */}
+                    {/* Minimalist location & tag tag overlay on corners
+                    /*
                     <div className="absolute top-6 left-6 bg-black/75 px-4 py-2 backdrop-blur-md border border-white/10">
                       <span className="text-[10px] font-mono tracking-widest text-[#fff] block uppercase">
                         {item.title.toUpperCase()}
@@ -209,7 +208,8 @@ export default function GalleryView() {
                       <span className="text-[9px] font-sans tracking-[0.15em] text-luxury-accent block uppercase mt-0.5">
                         {item.location || 'NEW YORK'} • {item.year || '2025'}
                       </span>
-                    </div>
+                    </div> */}
+
                   </div>
                 </div>
               ))}
