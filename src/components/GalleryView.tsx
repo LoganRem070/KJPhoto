@@ -291,12 +291,14 @@ export default function GalleryView() {
 
             {/* Bottom Caption bar */}
             <div className="w-full text-center pb-6">
-              <span className="font-sans text-xs tracking-widest text-[#666] block uppercase font-mono">
-                {selectedImage.location || 'NEW YORK STATE STUDIO'} • {selectedImage.year || '2025'}
-              </span>
-              <p className="font-serif italic text-sm text-luxury-muted mt-2 max-w-xl mx-auto px-4">
+              {selectedImage.location && selectedImage.year ? (
+                <span className="font-sans text-xs tracking-widest text-[#666] block uppercase font-mono">
+                  {selectedImage.location} • {selectedImage.year}
+                </span>
+              ) : null}
+              {/*DESCRIPTION FOR FULL SCREEN PICS <p className="font-serif italic text-sm text-luxury-muted mt-2 max-w-xl mx-auto px-4">
                 "{selectedImage.description}"
-              </p>
+              </p>*/}
             </div>
           </motion.div>
         )}
