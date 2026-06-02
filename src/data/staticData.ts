@@ -8,7 +8,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: 'weddings',
     title: 'Flowing Veil',
     description: 'An editorial cinematic embrace at golden hour, suspended in quiet grandeur on the cliffs.',
-    src: new URL('../assets/images/Wed_2.webp', import.meta.url).href,
+    src: new URL('../assets/images/Wed_2_compressed.webp', import.meta.url).href,
     location: 'The Garden',
     year: '2024'
   },
@@ -17,7 +17,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: 'weddings',
     title: 'Leaves All Around',
     description: 'Spacious high-ceiling architecture reflecting soft dramatic backlighting on a glowing walk-down.',
-    src: new URL('../assets/images/Wed_1.webp', import.meta.url).href,
+    src: new URL('../assets/images/Wed_1_compressed.webp', import.meta.url).href,
     location: 'The Great Outdoors',
     year: '2022'
   },
@@ -26,7 +26,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: 'weddings',
     title: 'The Rolls Royce',
     description: 'An elegant black and white candid exchange, capturing pure, unfiltered happiness.',
-    src: new URL('../assets/images/Wed_3.webp', import.meta.url).href,
+    src: new URL('../assets/images/Wed_3_compressed.webp', import.meta.url).href,
     location: "Leonard's",
     year: '2024'
   },
@@ -37,7 +37,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: 'sweet16',
     title: 'Elegance Redefined',
     description: 'A crisp modern glamour portrait focusing on the massive city skyline and the subject’s poised elegance, captured in a high-fashion editorial style.',
-    src: new URL('../assets/images/S16_1.webp', import.meta.url).href,
+    src: new URL('../assets/images/S16_1_compressed.webp', import.meta.url).href,
     location: 'New York City',
     year: '2024'
   },
@@ -46,7 +46,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: 'sweet16',
     title: 'Pose of the Party',
     description: 'A sophisticated premium Sweet 16 celebration portrait, framed with soft romantic candlelight in a luxury ballroom.',
-    src: new URL('../assets/images/S16_4.webp', import.meta.url).href,
+    src: new URL('../assets/images/S16_4_compressed.webp', import.meta.url).href,
     location: "Leonard's",
     year: '2024'
   },
@@ -55,7 +55,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: 'sweet16',
     title: 'Eternal Friendship',
     description: 'Friends laughing and enjoying the night, captured in a candid moment of pure joy and connection.',
-    src: new URL('../assets/images/S16_2.webp', import.meta.url).href,
+    src: new URL('../assets/images/S16_2_compressed.webp', import.meta.url).href,
     location: "Leonard's",
     year: '2025'
   },
@@ -66,7 +66,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: 'cultural',
     title: 'Vows of Red & Rich Gold',
     description: 'Intricate traditional South Asian silk embroidery meets timeless candlelit vows.',
-    src: new URL('../assets/images/SouthAsian_1.webp', import.meta.url).href,
+    src: new URL('../assets/images/SouthAsian_1_compressed.webp', import.meta.url).href,
     location: 'Taj Jai Mahal Palace',
     year: '2025'
   },
@@ -75,7 +75,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: 'cultural',
     title: 'Ritual of Sacred Flame',
     description: 'Raw, emotional documentation of standard ancestral marriage circles, amidst rising fragrant smoke.',
-    src: new URL('../assets/images/SouthAsian_2.webp', import.meta.url).href,
+    src: new URL('../assets/images/SouthAsian_2_compressed.webp', import.meta.url).href,
     location: 'Royal Udaipur Courtyard',
     year: '2025'
   },
@@ -84,7 +84,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: 'cultural',
     title: 'The Whispering Pines',
     description: 'An elegant outdoor getaway, highlighting natural smiles and the contrast of forest shadow.',
-    src: new URL('../assets/images/SouthAsian_3.webp', import.meta.url).href,
+    src: new URL('../assets/images/SouthAsian_3_compressed.webp', import.meta.url).href,
     location: 'Pacific Northwest Cliffs',
     year: '2025'
   },
