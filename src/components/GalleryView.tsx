@@ -188,7 +188,7 @@ export default function GalleryView() {
                       referrerPolicy="no-referrer"
                     />
 
-                    {/* Dark translucent cover on hover */}
+                    {/* Dark translucent cover on hover 
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <button
                         onClick={() => openLightbox(item)}
@@ -197,7 +197,7 @@ export default function GalleryView() {
                       >
                         <Maximize2 size={20} />
                       </button>
-                    </div>
+                    </div>*/}
 
                     {/* Minimalist location & tag tag overlay on corners
                     /*
