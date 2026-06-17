@@ -123,36 +123,6 @@ export const GALLERY_ITEMS: GalleryItem[] = [
 
 export const PHOTOBOOTH_OFFERINGS: PhotoboothOffering[] = [
   {
-    id: 'pb-vogue',
-    title: 'The Vogue Studio Booth',
-    subtitle: 'Editorial High-Contrast Glamour',
-    description: 'Step into a high-fashion editorial set with our flawless, wrap-around professional lighting and signature deep-contrast black and white filtering. It feels like a real high-end magazine cover shoot, instantly delivered into guests hands.',
-    features: [
-      'Pro studio ring flashes & softboxes',
-      'Ultra-flattering glamour smoothing filter',
-      'Minimalist extra-large seamless backing',
-      'On-site print & custom SMS/Airdrop sharing',
-      'Dedicated fashion director attendant'
-    ],
-    vibe: 'Bold, upscale, and magazine-ready',
-    tag: 'Flagship Experience'
-  },
-  {
-    id: 'pb-air-digital',
-    title: 'Open Air Digital Booth',
-    subtitle: 'Ultra-Modern Instant Sharing',
-    description: 'A modern, sleek digital station utilizing state-of-the-art DSLR imaging and ring illumination. Perfect for fast-paced, high-energy events where instant social sharing is the primary goal.',
-    features: [
-      'Stunning high-resolution DSLR sensors',
-      'Instant delivery via SMS, Email, or QR Code',
-      'Interactive touchscreen with live previews',
-      'Curated premium backdrops of choice',
-      'Customized elegant visual watermarks'
-    ],
-    vibe: 'Sleek, fluid, and highly social',
-    tag: 'Modern Classic'
-  },
-  {
     id: 'pb-air-print',
     title: 'Open Air Print Booth',
     subtitle: 'Physical Keepsakes with Timeless Design',
@@ -183,6 +153,36 @@ export const PHOTOBOOTH_OFFERINGS: PhotoboothOffering[] = [
     tag: 'Crowd Favorite'
   },
   {
+    id: 'pb-vogue',
+    title: 'The Vogue Studio Booth',
+    subtitle: 'Editorial High-Contrast Glamour',
+    description: 'Step into a high-fashion editorial set with our flawless, wrap-around professional lighting and signature deep-contrast black and white filtering. It feels like a real high-end magazine cover shoot, instantly delivered into guests hands.',
+    features: [
+      'Pro studio ring flashes & softboxes',
+      'Ultra-flattering glamour smoothing filter',
+      'Minimalist extra-large seamless backing',
+      'On-site print & custom SMS/Airdrop sharing',
+      'Dedicated fashion director attendant'
+    ],
+    vibe: 'Bold, upscale, and magazine-ready',
+    tag: 'Flagship Experience'
+  },
+  {
+    id: 'pb-air-digital',
+    title: 'Open Air Digital Booth',
+    subtitle: 'Ultra-Modern Instant Sharing',
+    description: 'A modern, sleek digital station utilizing state-of-the-art DSLR imaging and ring illumination. Perfect for fast-paced, high-energy events where instant social sharing is the primary goal.',
+    features: [
+      'Stunning high-resolution DSLR sensors',
+      'Instant delivery via SMS, Email, or QR Code',
+      'Interactive touchscreen with live previews',
+      'Curated premium backdrops of choice',
+      'Customized elegant visual watermarks'
+    ],
+    vibe: 'Sleek, fluid, and highly social',
+    tag: 'Modern Classic'
+  },
+  {
     id: 'pb-telephone',
     title: 'Telephone Video Message Booth',
     subtitle: 'Vintage Audio-Video Guest Registry',
@@ -209,7 +209,7 @@ export const PACKAGES_DATA: PackageDetails[] = [
       '6 Hours continuous videographic coverage by lead documentarian',
       'Full private online client portal active for twelve months',
       'Bespoke color correction and creative grading processing',
-      'Curated set of 400+ high-resolution digital negatives'
+      'Curated set of 1000+ high-resolution digital negatives'
     ],
     inclusions: [
       'Principal Photographer',
@@ -223,11 +223,11 @@ export const PACKAGES_DATA: PackageDetails[] = [
     title: 'Signature Collection',
     tagline: 'Comprehensive luxury storytelling capturing fine-art details and cinematic movement.',
     details: [
-      '8 Hours continuous photographic coverage with Principal and Lead Associates',
-      '8 Hours continuous videographic coverage by lead documentarian',
+      '8 Hours continuous photographic coverage with Principal and Associate',
+      '8 Hours continuous videographic coverage by lead documentarian and Associate',
       'Bespoke 5-minute premium Highlight Film with hand-selected master score',
       'Full private online download portal and luxury flash drive delivery',
-      '600+ signature polished digital negatives'
+      '2000+ signature polished digital negatives'
     ],
     inclusions: [
       'Two Photographers',
@@ -246,9 +246,9 @@ export const PACKAGES_DATA: PackageDetails[] = [
       'Dual principal senior wedding photographers on duty',
       'Dual expert videographers establishing cinematic multi-lens setups',
       'Comprehensive 8-to-10 minute Extended Cinematic Film plus master speech cuts',
-      'Comes with any Photobooth package of choice included (4 hours operation)',
-      'Private print store integration with custom hand-made leather album options',
-      '900+ master high-resolution digital files'
+      'Comes with any Photobooth package of choice included (5 hours operation)',
+      'Private print store integration with custom album options',
+      '2500+ master high-resolution digital files'
     ],
     inclusions: [
       'Two Principal Photographers',

@@ -82,18 +82,18 @@ export default function PhotoboothView({ setView }: PhotoboothViewProps) {
                     referrerPolicy="no-referrer"
                   />
                   
-                  {/* Floating badge */}
+                  {/* Floating badge 
                   <div className="absolute top-5 left-5 z-20 bg-[#0c0c0c] border border-white/10 px-4 py-2 flex items-center gap-2.5">
                     {ICON_MAP[booth.id]}
                     <span className="text-[10px] font-mono tracking-widest text-light uppercase">
                       {booth.tag}
                     </span>
-                  </div>
+                  </div>*/}
 
-                  {/* Corner stats watermark info */}
+                  {/* Corner stats watermark info 
                   <div className="absolute bottom-5 right-5 z-20 bg-black/60 px-3 py-1.5 text-[9px] font-mono text-luxury-accent uppercase tracking-widest backdrop-blur-sm pointer-events-none">
                     Studio Grade Config Activated
-                  </div>
+                  </div>*/}
                 </div>
 
                 {/* Info & Data details column */}
