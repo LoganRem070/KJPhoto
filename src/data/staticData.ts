@@ -126,7 +126,7 @@ export const PHOTOBOOTH_OFFERINGS: PhotoboothOffering[] = [
     id: 'pb-air-print',
     title: 'Open Air Print Booth',
     subtitle: 'Physical Keepsakes with Timeless Design',
-    description: 'Elegant physical printouts on premium thick paper, featuring customizable bespoke page overlays designed by our typographic artists. Celebrate with tangible art pieces guests take home.',
+    description: 'Elegant physical printouts on premium photo paper, featuring customizable bespoke page overlays designed by our typographic artists. Celebrate with tangible art pieces guests take home.',
     features: [
       'High-speed dye-sublimation dye printers',
       'Lustre-finish archival quality prints',
@@ -161,7 +161,6 @@ export const PHOTOBOOTH_OFFERINGS: PhotoboothOffering[] = [
       'Pro studio ring flashes & softboxes',
       'Ultra-flattering glamour smoothing filter',
       'Minimalist extra-large seamless backing',
-      'On-site print & custom SMS/Airdrop sharing',
       'Dedicated fashion director attendant'
     ],
     vibe: 'Bold, upscale, and magazine-ready',
