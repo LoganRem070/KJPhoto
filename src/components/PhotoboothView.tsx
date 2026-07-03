@@ -16,8 +16,8 @@ const PHOTOBOOTH_IMAGES: Record<string, string> = {
   'pb-vogue': new URL('../assets/images/VogueBoothTemp.webp', import.meta.url).href,
   'pb-roamer': new URL('../assets/images/RoamerTemp.jpg', import.meta.url).href,
   'pb-air-digital': new URL('../assets/images/OpenAirTemp.jpg', import.meta.url).href,
-  'pb-air-print': new URL('../assets/images/OpenAirPrint_compressed.webp', import.meta.url).href,
-  'pb-360-video': new URL('../assets/images/360Booth_compressed.webp', import.meta.url).href,
+  'pb-air-print': new URL('../assets/images/OpenAirNew.webp', import.meta.url).href,
+  'pb-360-video': new URL('../assets/images/360New.webp', import.meta.url).href,
   'pb-telephone': new URL('../assets/images/PhoneboothTemp.jpg', import.meta.url).href,
 };
 
