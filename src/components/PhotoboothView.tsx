@@ -13,11 +13,12 @@ const ICON_MAP: Record<string, React.ReactNode> = {
 };
 
 const PHOTOBOOTH_IMAGES: Record<string, string> = {
-  'pb-vogue': '/src/assets/images/photobooth_vogue_luxury_1779305640420.png',
-  'pb-air-digital': new URL('../assets/images/Digital1_compressed.webp', import.meta.url).href,
+  'pb-vogue': new URL('../assets/images/VogueBoothTemp.webp', import.meta.url).href,
+  'pb-roamer': new URL('../assets/images/RoamerTemp.jpg', import.meta.url).href,
+  'pb-air-digital': new URL('../assets/images/OpenAirTemp.jpg', import.meta.url).href,
   'pb-air-print': new URL('../assets/images/OpenAirPrint_compressed.webp', import.meta.url).href,
   'pb-360-video': new URL('../assets/images/360Booth_compressed.webp', import.meta.url).href,
-  'pb-telephone': 'https://images.unsplash.com/photo-1493612276216-ee3925520721?auto=format&fit=crop&q=80&w=1200',
+  'pb-telephone': new URL('../assets/images/PhoneboothTemp.jpg', import.meta.url).href,
 };
 
 interface PhotoboothViewProps {

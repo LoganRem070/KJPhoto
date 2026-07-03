@@ -131,7 +131,7 @@ export const PHOTOBOOTH_OFFERINGS: PhotoboothOffering[] = [
       'High-speed dye-sublimation dye printers',
       'Lustre-finish archival quality prints',
       'Custom elegant frames or template layouts',
-      'Curated box of luxury minimalist props',
+      'Curated box of luxury props',
       'Bespoke leatherbound guest print sign book'
     ],
     vibe: 'Tactile, nostalgic, and elegant',
@@ -141,7 +141,7 @@ export const PHOTOBOOTH_OFFERINGS: PhotoboothOffering[] = [
     id: 'pb-360-video',
     title: '360° Cinematic Video Booth',
     subtitle: 'Dynamic Slow-Motion Video Capture',
-    description: 'An interactive rotating platform capturing 120 FPS high-definition videos with custom motion ramps, transitions, and immersive soundscapes, ideal for dance floors and energy filled parties.',
+    description: 'An interactive rotating platform capturing high-definition videos with custom motion ramps, transitions, and immersive soundscapes, ideal for dance floors and energy filled parties.',
     features: [
       'Spacious high-capacity heavy-duty platform',
       'Ultra high frame-rate HD cameras',
@@ -170,12 +170,26 @@ export const PHOTOBOOTH_OFFERINGS: PhotoboothOffering[] = [
     id: 'pb-air-digital',
     title: 'Open Air Digital Booth',
     subtitle: 'Ultra-Modern Instant Sharing',
-    description: 'A modern, sleek digital station utilizing state-of-the-art DSLR imaging and ring illumination. Perfect for fast-paced, high-energy events where instant social sharing is the primary goal.',
+    description: 'A modern, sleek digital station utilizing state-of-the-art imaging and ring illumination. Perfect for fast-paced, high-energy events where instant social sharing is the primary goal.',
     features: [
-      'Stunning high-resolution DSLR sensors',
-      'Instant delivery via SMS, Email, or QR Code',
+      'Stunning high-resolution photos',
+      'Instant delivery via SMS or Email',
       'Interactive touchscreen with live previews',
       'Curated premium backdrops of choice',
+      'Customized elegant visual watermarks'
+    ],
+    vibe: 'Sleek, fluid, and highly social',
+    tag: 'Modern Classic'
+  },
+  {
+    id: 'pb-roamer',
+    title: 'The Roamer Booth',
+    subtitle: 'Mobile, Versatile, and Engaging',
+    description: 'A portable, flexible solution for capturing moments in any location. Ideal for outdoor events, remote locations, or situations where a fixed setup is not feasible.',
+    features: [
+      'Stunning high-resolution photos',
+      'Instant delivery via SMS or Email',
+      'Interactive touchscreen with live previews',
       'Customized elegant visual watermarks'
     ],
     vibe: 'Sleek, fluid, and highly social',
@@ -190,7 +204,7 @@ export const PHOTOBOOTH_OFFERINGS: PhotoboothOffering[] = [
       'Beautiful vintage 1970s rotary phone style',
       'High-fidelity studio-grade recording capsules',
       'Ambient noise-filtering technology',
-      'Elegant wooden signage explaining behaviors',
+      'Operator to guide guests through recording',
       'Full audio-video compilation delivered post-event'
     ],
     vibe: 'Intimate, warm, and sentimental',
