@@ -278,7 +278,7 @@ export default function HomeView({ setView }: HomeViewProps) {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
             onClick={() => {
-              setView('gallery');
+              setView('highlights');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             className="group relative h-[480px] md:h-[550px] overflow-hidden bg-black border border-white/5 cursor-pointer shadow-2xl flex items-end p-8"
