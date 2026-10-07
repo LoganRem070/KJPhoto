@@ -13,6 +13,7 @@ import PhotoboothView from './components/PhotoboothView';
 import PackagesView from './components/PackagesView';
 import HighlightsView from './components/HighlightsView';
 import ContactView from './components/ContactView';
+import { Analytics } from '@vercel/analytics/react';
 import { AnimatePresence, motion } from 'motion/react';
 
 export default function App() {
@@ -67,6 +68,7 @@ export default function App() {
       {/* Shared Editorial Footer */}
       <Footer setView={setView} />
 
+      <Analytics />
     </div>
   );
 }
