@@ -123,9 +123,41 @@ export const GALLERY_ITEMS: GalleryItem[] = [
 
 export const PHOTOBOOTH_OFFERINGS: PhotoboothOffering[] = [
   {
+    id: 'exp-key1',
+    title: 'Photo Keychain Experience',
+    subtitle: 'Luxury Keepsakes Guests Can Carry Home',
+    description: 'A refined keepsake booth designed to turn every guest moment into a polished, personal treasure. With guided posing, elegant styling, and premium finishing, each photo becomes a beautifully crafted keychain that feels thoughtful, collectible, and truly event-specific.',
+    features: [
+      'Custom keychain templates with event branding',
+      'Premium matte or glossy finish options',
+      'Quick on-site printing and guest pickup',
+      'Styled prop setup and guided posing direction',
+      'Optional initials, monograms, or custom text details',
+      'Fantastic option for Party Favors'
+    ],
+    vibe: 'Personal, polished, and memorable',
+    tag: 'Guest Favorite'
+  },
+  {
+    id: 'exp-key2',
+    title: 'Custom Keepsake Station',
+    subtitle: 'Magnet, Button, or Bottle Opener — Your Choice',
+    description: 'A flexible keepsake booth where guests can create a personalized memento in the format that best fits the event. Choose a custom a 3-inch button with a magnet, pin, or a bottle opener, or offer all three as a coordinated set with your event branding and favorite photo moments.',
+    features: [
+      'Custom magnet, button, or bottle opener options',
+      'Event branding and personalized text available',
+      'Fast on-site production for guest pickup',
+      'Styled setup with guided posing and design support',
+      'Available as a single option or all three together',
+      'Perfect for weddings, parties, and branded events'
+    ],
+    vibe: 'Flexible, personal, and event-ready',
+    tag: 'Customizable Favorite'
+  },
+  {
     id: 'pb-air-print',
     title: 'Open Air Print Booth',
-    subtitle: 'Physical Keepsakes with Timeless Design',
+    subtitle: 'Physical Keepsakes with Timeless Value',
     description: 'Elegant physical printouts on premium photo paper, featuring customizable bespoke page overlays designed by our typographic artists. Celebrate with tangible art pieces guests take home.',
     features: [
       'High-speed dye-sublimation dye printers',

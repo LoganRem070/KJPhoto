@@ -13,6 +13,8 @@ const ICON_MAP: Record<string, React.ReactNode> = {
 };
 
 const PHOTOBOOTH_IMAGES: Record<string, string> = {
+  'exp-key1': new URL('../assets/images/Keychains.png', import.meta.url).href,
+  'exp-key2': new URL('../assets/images/Magnets1.jpg', import.meta.url).href,
   'pb-vogue': new URL('../assets/images/VogueBoothTemp.webp', import.meta.url).href,
   'pb-roamer': new URL('../assets/images/RoamerTemp.jpg', import.meta.url).href,
   'pb-air-digital': new URL('../assets/images/OpenAirTemp.jpg', import.meta.url).href,
@@ -62,7 +64,7 @@ export default function PhotoboothView({ setView }: PhotoboothViewProps) {
         <section className="space-y-40">
           {PHOTOBOOTH_OFFERINGS.map((booth, idx) => {
             const isEven = idx % 2 === 0;
-            const boothImage = PHOTOBOOTH_IMAGES[booth.id];
+            const boothImage = PHOTOBOOTH_IMAGES[booth.id] ?? new URL('../assets/images/BoothTitle_compressed.webp', import.meta.url).href;
 
             return (
               <div

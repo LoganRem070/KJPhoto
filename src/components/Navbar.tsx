@@ -38,7 +38,7 @@ export default function Navbar({ currentView, setView }: NavbarProps) {
   ];
 
   const rightLinks: { label: string; view: ViewType }[] = [
-    { label: 'Photobooth', view: 'photobooth' },
+    { label: 'Experiences', view: 'photobooth' },
     { label: 'Packages', view: 'packages' },
     { label: 'Contact', view: 'contact' },
   ];
