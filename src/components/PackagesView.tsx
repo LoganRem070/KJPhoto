@@ -84,7 +84,7 @@ export default function PackagesView({ setView }: PackagesViewProps) {
 
               {/* Detailed Breakdown list */}
               <div className="w-full md:w-8/12 space-y-4">
-                <span className="text-[10px] tracking-widest text-[#555] uppercase font-mono block">
+                <span className="text-[10px] tracking-widest text-[#8f8f8f] uppercase font-mono block">
                   Service Inclusions & Scope
                 </span>
                 
@@ -132,6 +132,8 @@ export default function PackagesView({ setView }: PackagesViewProps) {
                 >
                   <button
                     onClick={() => toggleFaq(i)}
+                    aria-expanded={isOpen}
+                    aria-controls={`faq-answer-${i}`}
                     className="w-full flex items-center justify-between text-left py-2 hover:text-luxury-accent cursor-pointer group focus:outline-none"
                   >
                     <span className="font-serif text-sm sm:text-base tracking-wide text-luxury-fg group-hover:text-luxury-accent transition-colors">
@@ -142,21 +144,23 @@ export default function PackagesView({ setView }: PackagesViewProps) {
                     </span>
                   </button>
 
-                  <AnimatePresence initial={false}>
-                    {isOpen && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: 'easeInOut' }}
-                        className="overflow-hidden"
-                      >
-                        <p className="font-sans text-xs sm:text-sm text-luxury-muted leading-relaxed tracking-wide pt-2 pb-1 pr-6">
-                          {faq.a}
-                        </p>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  <div id={`faq-answer-${i}`}>
+                    <AnimatePresence initial={false}>
+                      {isOpen && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3, ease: 'easeInOut' }}
+                          className="overflow-hidden"
+                        >
+                          <p className="font-sans text-xs sm:text-sm text-luxury-muted leading-relaxed tracking-wide pt-2 pb-1 pr-6">
+                            {faq.a}
+                          </p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
                 </div>
               );
             })}

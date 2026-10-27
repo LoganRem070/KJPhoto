@@ -1,4 +1,4 @@
-export type ViewType = 'home' | 'gallery' | 'photobooth' | 'packages' | 'highlights' | 'contact';
+export type ViewType = 'home' | 'gallery' | 'photobooth' | 'packages' | 'highlights' | 'contact' | 'privacy' | 'accessibility';
 
 export interface GalleryItem {
   id: string;

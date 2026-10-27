@@ -13,8 +13,10 @@ import PhotoboothView from './components/PhotoboothView';
 import PackagesView from './components/PackagesView';
 import HighlightsView from './components/HighlightsView';
 import ContactView from './components/ContactView';
+import PrivacyView from './components/PrivacyView';
+import AccessibilityView from './components/AccessibilityView';
 import { Analytics } from '@vercel/analytics/react';
-import { AnimatePresence, motion } from 'motion/react';
+import { AnimatePresence, MotionConfig, motion } from 'motion/react';
 
 export default function App() {
   const [currentView, setView] = useState<ViewType>('home');
@@ -38,37 +40,43 @@ export default function App() {
         return <HighlightsView />;
       case 'contact':
         return <ContactView />;
+      case 'privacy':
+        return <PrivacyView />;
+      case 'accessibility':
+        return <AccessibilityView />;
       default:
         return <HomeView setView={setView} />;
     }
   };
 
   return (
-    <div className="min-h-screen bg-luxury-bg text-luxury-fg flex flex-col justify-between selection:bg-luxury-accent selection:text-black">
-      
-      {/* Sticky Topbar Navbar */}
-      <Navbar currentView={currentView} setView={setView} />
+    <MotionConfig reducedMotion="user">
+      <div className="min-h-screen bg-luxury-bg text-luxury-fg flex flex-col justify-between selection:bg-luxury-accent selection:text-black">
 
-      {/* Screen Wrapper with Smooth Animate Gate */}
-      <main className="flex-grow">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentView}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.5, ease: 'easeInOut' }}
-            className="w-full"
-          >
-            {renderActiveView()}
-          </motion.div>
-        </AnimatePresence>
-      </main>
+        {/* Sticky Topbar Navbar */}
+        <Navbar currentView={currentView} setView={setView} />
 
-      {/* Shared Editorial Footer */}
-      <Footer setView={setView} />
+        {/* Screen Wrapper with Smooth Animate Gate */}
+        <main className="flex-grow">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentView}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.5, ease: 'easeInOut' }}
+              className="w-full"
+            >
+              {renderActiveView()}
+            </motion.div>
+          </AnimatePresence>
+        </main>
 
-      <Analytics />
-    </div>
+        {/* Shared Editorial Footer */}
+        <Footer setView={setView} />
+
+        <Analytics />
+      </div>
+    </MotionConfig>
   );
 }

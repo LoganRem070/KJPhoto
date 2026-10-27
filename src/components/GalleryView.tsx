@@ -182,7 +182,7 @@ export default function GalleryView() {
                   <div className="w-full overflow-hidden bg-black/25 outline outline-white/5 relative aspect-[16/10] md:aspect-[21/9] shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
                     <img
                       src={item.src}
-                      alt={item.title}
+                      alt={`${item.title}: ${item.description}`}
                       loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-104 filter brightness-[0.85] group-hover:brightness-100"
                       referrerPolicy="no-referrer"
@@ -292,7 +292,7 @@ export default function GalleryView() {
             {/* Bottom Caption bar */}
             <div className="w-full text-center pb-6">
               {selectedImage.location && selectedImage.year ? (
-                <span className="font-sans text-xs tracking-widest text-[#666] block uppercase font-mono">
+                <span className="font-sans text-xs tracking-widest text-[#8f8f8f] block uppercase font-mono">
                   {selectedImage.location} • {selectedImage.year}
                 </span>
               ) : null}

@@ -80,8 +80,22 @@ export default function Footer({ setView }: FooterProps) {
         </div>
 
         {/* Copyright and Legal statement */}
-        <div className="w-full max-w-sm pt-8 border-t border-white/5 flex flex-col gap-1 items-center text-[10px] tracking-widest text-[#555] uppercase font-mono">
+        <div className="w-full max-w-sm pt-8 border-t border-white/5 flex flex-col gap-1 items-center text-[10px] tracking-widest text-[#8f8f8f] uppercase font-mono">
           <p>© {currentYear} K&J PHOTOGRAPHY. ALL RIGHTS RESERVED.</p>
+          <div className="flex items-center gap-5 mt-3">
+            {(['privacy', 'accessibility'] as ViewType[]).map((view) => (
+              <button
+                key={view}
+                onClick={() => {
+                  setView(view);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="hover:text-luxury-accent transition-colors"
+              >
+                {view === 'privacy' ? 'Privacy Policy' : 'Accessibility'}
+              </button>
+            ))}
+          </div>
           <p className="flex items-center gap-1.5 mt-1">
             <span>Made with</span>
             <Heart size={8} className="text-luxury-accent fill-luxury-accent animate-pulse" />

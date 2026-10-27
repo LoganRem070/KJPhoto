@@ -120,7 +120,7 @@ export default function PhotoboothView({ setView }: PhotoboothViewProps) {
 
                   {/* Specifications checklist */}
                   <div className="pt-6 border-t border-white/5 space-y-4">
-                    <span className="text-[10px] tracking-widest text-[#555] uppercase font-mono block">
+                    <span className="text-[10px] tracking-widest text-[#8f8f8f] uppercase font-mono block">
                       Premium inclusions & details:
                     </span>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
@@ -136,7 +136,7 @@ export default function PhotoboothView({ setView }: PhotoboothViewProps) {
                   {/* Vibe metadata & quick reservation */}
                   <div className="pt-6 border-t border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div>
-                      <span className="text-[8px] tracking-widest font-mono text-[#555] block uppercase">EXPERIENCE MOOD</span>
+                      <span className="text-[8px] tracking-widest font-mono text-[#8f8f8f] block uppercase">EXPERIENCE MOOD</span>
                       <span className="text-xs uppercase tracking-widest font-mono text-luxury-fg font-semibold">{booth.vibe}</span>
                     </div>
 

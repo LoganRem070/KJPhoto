@@ -60,6 +60,7 @@ export default function Navbar({ currentView, setView }: NavbarProps) {
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="md:hidden text-luxury-fg hover:text-luxury-accent transition-colors focus:outline-none z-50"
           aria-label="Toggle navigation"
+          aria-expanded={mobileMenuOpen}
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -70,6 +71,7 @@ export default function Navbar({ currentView, setView }: NavbarProps) {
             <button
               key={link.view}
               onClick={() => handleNavClick(link.view)}
+              aria-current={currentView === link.view ? 'page' : undefined}
               className="relative py-2 text-left text-luxury-fg/70 hover:text-luxury-fg transition-all cursor-pointer group"
             >
               <span className={currentView === link.view ? 'text-luxury-accent font-semibold' : ''}>
@@ -90,9 +92,9 @@ export default function Navbar({ currentView, setView }: NavbarProps) {
             onClick={() => handleNavClick('home')}
             className="cursor-pointer group flex flex-col items-center gap-0.5 focus:outline-none"
           >
-            <h1 className="font-serif text-lg md:text-2xl tracking-[0.25em] uppercase font-semibold text-luxury-fg transition-colors group-hover:text-luxury-accent">
+            <span className="font-serif text-lg md:text-2xl tracking-[0.25em] uppercase font-semibold text-luxury-fg transition-colors group-hover:text-luxury-accent">
               K&J <span className="font-light italic tracking-[0.1em] text-sm md:text-base capitalize text-luxury-accent/80">Photography</span>
-            </h1>
+            </span>
             <span className="text-[7px] tracking-[0.5em] text-luxury-muted uppercase hidden md:inline-block">
               fine-art & visual storytelling
             </span>
@@ -105,6 +107,7 @@ export default function Navbar({ currentView, setView }: NavbarProps) {
             <button
               key={link.view}
               onClick={() => handleNavClick(link.view)}
+              aria-current={currentView === link.view ? 'page' : undefined}
               className="relative py-2 text-right text-luxury-fg/70 hover:text-luxury-fg transition-all cursor-pointer group"
             >
               <span className={link.view === 'photobooth'
@@ -145,6 +148,7 @@ export default function Navbar({ currentView, setView }: NavbarProps) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.08 }}
                   onClick={() => handleNavClick(link.view)}
+                  aria-current={currentView === link.view ? 'page' : undefined}
                   className={`text-2xl font-serif tracking-[0.15em] uppercase transition-colors ${
                     link.view === 'photobooth'
                       ? 'bg-luxury-accent px-6 py-3 font-semibold text-luxury-bg hover:bg-luxury-fg'

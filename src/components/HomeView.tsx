@@ -1,69 +1,96 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ViewType } from '../types';
-import { ArrowRight, ChevronLeft, ChevronRight, Play } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 interface HomeViewProps {
   setView: (view: ViewType) => void;
 }
 
+const responsiveHeroImage = (name: string) => {
+  const sources = [
+    { width: 640, src: new URL(`../assets/images/optimized/${name}_640.jpg`, import.meta.url).href },
+    { width: 1280, src: new URL(`../assets/images/optimized/${name}_1280.jpg`, import.meta.url).href },
+    { width: 1920, src: new URL(`../assets/images/optimized/${name}_1920.jpg`, import.meta.url).href },
+  ];
+
+  return {
+    src: sources[1].src,
+    srcSet: sources.map(({ width, src }) => `${src} ${width}w`).join(', '),
+  };
+};
+
 const HERO_SLIDES = [
   {
-    image: new URL('../assets/images/Main_0_compressed.webp', import.meta.url).href,
+    image: responsiveHeroImage('Main_0'),
     title: 'K&J Photography',
     subtitle: 'Capturing Moments That Last Forever',
     tagline: 'LUXURY FINE-ART DOCUMENTARY',
   },
   {
-    image: new URL('../assets/images/Main_1_compressed.webp', import.meta.url).href,
+    image: responsiveHeroImage('Main_1'),
     title: 'Timeless Legacies',
     subtitle: 'Preserving Sacred & Sincere Vows',
     tagline: 'CATHEDRALS & SACRED SPACES',
   },
   {
-    image: new URL('../assets/images/Main_2_compressed.webp', import.meta.url).href,
+    image: responsiveHeroImage('Main_2'),
     title: 'The Debut Gaze',
     subtitle: 'Elegant Celebrations of Growth',
     tagline: 'PREMIUM SWEET 16 EDITORIAL',
   },
   {
-    image: new URL('../assets/images/Main_3_compressed.webp', import.meta.url).href,
+    image: responsiveHeroImage('Main_3'),
     title: 'Vibrant Splendor',
     subtitle: 'Traditional Rituals Custom Styled',
     tagline: 'CULTURAL ANCESTRAL CELEBRATIONS',
   }
 ];
 
+const heroImagePreload = document.createElement('link');
+heroImagePreload.rel = 'preload';
+heroImagePreload.as = 'image';
+heroImagePreload.imageSrcset = HERO_SLIDES[0].image.srcSet;
+heroImagePreload.imageSizes = '100vw';
+document.head.appendChild(heroImagePreload);
+
 export default function HomeView({ setView }: HomeViewProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const intervalRef = useRef<number | null>(null);
-
-  const startAutoRotate = () => {
-    if (intervalRef.current) {
-      window.clearInterval(intervalRef.current);
-    }
-    intervalRef.current = window.setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
-    }, 5500);
-  };
+  const [isAutoRotating, setIsAutoRotating] = useState(
+    () => !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  );
 
   useEffect(() => {
-    startAutoRotate();
-    return () => {
-      if (intervalRef.current) {
-        window.clearInterval(intervalRef.current);
-      }
-    };
+    const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const updateAutoRotate = () => setIsAutoRotating(!motionPreference.matches);
+
+    motionPreference.addEventListener('change', updateAutoRotate);
+    return () => motionPreference.removeEventListener('change', updateAutoRotate);
   }, []);
 
-  const handleNext = () => {
-    setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
-    startAutoRotate();
+  useEffect(() => {
+    if (!isAutoRotating) return;
+
+    const intervalId = window.setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+    }, 5500);
+
+    return () => window.clearInterval(intervalId);
+  }, [isAutoRotating]);
+
+  const handleNext = () => setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+  const handlePrev = () => setCurrentSlide((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
+
+  const navigateToView = (view: ViewType) => {
+    setView(view);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handlePrev = () => {
-    setCurrentSlide((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
-    startAutoRotate();
+  const handleCardKeyDown = (event: React.KeyboardEvent<HTMLDivElement>, view: ViewType) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      navigateToView(view);
+    }
   };
 
   return (
@@ -83,8 +110,11 @@ export default function HomeView({ setView }: HomeViewProps) {
               className="absolute inset-0 w-full h-full"
             >
               <img
-                src={HERO_SLIDES[currentSlide].image}
+                src={HERO_SLIDES[currentSlide].image.src}
+                srcSet={HERO_SLIDES[currentSlide].image.srcSet}
+                sizes="100vw"
                 alt={HERO_SLIDES[currentSlide].title}
+                fetchPriority={currentSlide === 0 ? 'high' : 'auto'}
                 className="w-full h-full object-cover object-center scale-102"
                 referrerPolicy="no-referrer"
               />
@@ -166,6 +196,14 @@ export default function HomeView({ setView }: HomeViewProps) {
             >
               <ChevronRight size={18} />
             </button>
+            <button
+              onClick={() => setIsAutoRotating((rotating) => !rotating)}
+              className="w-10 h-10 border border-white/20 hover:border-luxury-accent flex items-center justify-center text-luxury-fg/70 hover:text-luxury-accent transition-colors bg-black/10 backdrop-blur-sm cursor-pointer"
+              aria-label={isAutoRotating ? 'Pause slideshow' : 'Play slideshow'}
+              aria-pressed={!isAutoRotating}
+            >
+              {isAutoRotating ? <Pause size={16} /> : <Play size={16} />}
+            </button>
           </div>
 
           <div className="hidden sm:flex items-center gap-2.5">
@@ -173,6 +211,8 @@ export default function HomeView({ setView }: HomeViewProps) {
               <button
                 key={i}
                 onClick={() => setCurrentSlide(i)}
+                aria-label={`Show slide ${i + 1}: ${HERO_SLIDES[i].title}`}
+                aria-pressed={currentSlide === i}
                 className={`h-1.5 transition-all duration-500 rounded-full cursor-pointer ${
                   currentSlide === i ? 'w-8 bg-luxury-accent' : 'w-2 bg-white/20'
                 }`}
@@ -242,6 +282,10 @@ export default function HomeView({ setView }: HomeViewProps) {
               setView('gallery');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
+            onKeyDown={(event) => handleCardKeyDown(event, 'gallery')}
+            role="button"
+            tabIndex={0}
+            aria-label="View photography gallery"
             className="group relative h-[480px] md:h-[550px] overflow-hidden bg-black border border-white/5 cursor-pointer shadow-2xl flex items-end p-8"
           >
             <div className="absolute inset-0 z-0 overflow-hidden">
@@ -281,6 +325,10 @@ export default function HomeView({ setView }: HomeViewProps) {
               setView('highlights');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
+            onKeyDown={(event) => handleCardKeyDown(event, 'highlights')}
+            role="button"
+            tabIndex={0}
+            aria-label="View cinematography highlights"
             className="group relative h-[480px] md:h-[550px] overflow-hidden bg-black border border-white/5 cursor-pointer shadow-2xl flex items-end p-8"
           >
             <div className="absolute inset-0 z-0 overflow-hidden">
@@ -320,6 +368,10 @@ export default function HomeView({ setView }: HomeViewProps) {
               setView('photobooth');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
+            onKeyDown={(event) => handleCardKeyDown(event, 'photobooth')}
+            role="button"
+            tabIndex={0}
+            aria-label="View photobooth offerings"
             className="group relative h-[480px] md:h-[550px] overflow-hidden bg-black border border-white/5 cursor-pointer shadow-2xl flex items-end p-8"
           >
             <div className="absolute inset-0 z-0 overflow-hidden">

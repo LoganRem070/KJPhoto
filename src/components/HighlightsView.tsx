@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { HIGHLIGHTS_DATA } from '../data/staticData';
-import { Volume2, VolumeX, Film, Clock, Sparkles } from 'lucide-react';
+import { Play, Volume2, VolumeX, Film, Clock, Sparkles } from 'lucide-react';
 import { motion } from 'motion/react';
 
 type EmbeddedVideo = {
@@ -48,6 +48,32 @@ export default function HighlightsView() {
     'h-cathedral-symphony': true,
     'h-garden-elegance': true,
   });
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(
+    () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  );
+  const [isSmallScreen, setIsSmallScreen] = useState(
+    () => window.matchMedia('(max-width: 767px)').matches
+  );
+  const [loadedVideoIds, setLoadedVideoIds] = useState<Record<string, boolean>>({});
+
+  useEffect(() => {
+    const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const screenSize = window.matchMedia('(max-width: 767px)');
+    const updateMotionPreference = () => {
+      setPrefersReducedMotion(motionPreference.matches);
+      if (motionPreference.matches) {
+        document.querySelectorAll<HTMLVideoElement>('#highlights-container video').forEach((video) => video.pause());
+      }
+    };
+    const updateScreenSize = () => setIsSmallScreen(screenSize.matches);
+
+    motionPreference.addEventListener('change', updateMotionPreference);
+    screenSize.addEventListener('change', updateScreenSize);
+    return () => {
+      motionPreference.removeEventListener('change', updateMotionPreference);
+      screenSize.removeEventListener('change', updateScreenSize);
+    };
+  }, []);
 
   const toggleMute = (id: string, e: React.MouseEvent) => {
     e.stopPropagation();
@@ -102,14 +128,38 @@ export default function HighlightsView() {
                     const embed = getEmbeddedVideo(item.videoUrl);
 
                     if (embed.type === 'video') {
+                      if (isSmallScreen && !loadedVideoIds[item.id]) {
+                        return (
+                          <div className="w-full h-full relative bg-black">
+                            <img
+                              src={item.thumbnailUrl}
+                              alt=""
+                              className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-black/35 flex items-center justify-center">
+                              <button
+                                type="button"
+                                onClick={() => setLoadedVideoIds((prev) => ({ ...prev, [item.id]: true }))}
+                                className="px-5 py-3 bg-black/85 text-white border border-white/30 hover:border-luxury-accent hover:text-luxury-accent inline-flex items-center gap-2 font-mono text-xs tracking-widest uppercase"
+                                aria-label={`Play ${item.title} video`}
+                              >
+                                <Play size={16} aria-hidden="true" />
+                                <span>Play film</span>
+                              </button>
+                            </div>
+                          </div>
+                        );
+                      }
+
                       return (
                         <video
                           src={embed.src}
                           poster={item.thumbnailUrl}
-                          autoPlay
+                          autoPlay={!prefersReducedMotion || loadedVideoIds[item.id]}
                           loop
                           muted={isMuted}
                           playsInline
+                          controls
                           className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-101 filter brightness-[0.8] group-hover:brightness-[0.95]"
                         />
                       );
@@ -145,6 +195,7 @@ export default function HighlightsView() {
                       onClick={(e) => toggleMute(item.id, e)}
                       className="p-3 bg-black/85 text-luxury-accent hover:text-white border border-white/10 hover:border-luxury-accent hover:scale-105 active:scale-95 transition-all shadow-2xl rounded-none cursor-pointer flex items-center justify-center gap-2 font-mono text-[10px] tracking-widest uppercase"
                       title={isMuted ? "Unmute Ambient Sound" : "Mute Sound"}
+                      aria-label={isMuted ? `Unmute ${item.title} video` : `Mute ${item.title} video`}
                     >
                       {isMuted ? <VolumeX size={14} className="text-luxury-accent" /> : <Volume2 size={14} className="text-white" />}
                       <span className="hidden sm:inline">{isMuted ? "Unmute" : "Mute"}</span>
