@@ -123,14 +123,14 @@ export default function HomeView({ setView }: HomeViewProps) {
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 font-sans text-xs tracking-[0.2em] uppercase font-semibold">
                 <button
-                  id="view-gallery-btn"
+                  id="view-photobooths-btn"
                   onClick={() => {
-                    setView('gallery');
+                    setView('photobooth');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
                   className="px-8 py-3.5 border border-luxury-accent text-luxury-accent text-[11px] uppercase tracking-[0.2em] hover:bg-luxury-accent hover:text-[#0a0a0a] transition-colors rounded-none cursor-pointer flex items-center gap-2"
                 >
-                  <span>View Gallery</span>
+                  <span>View Photobooths</span>
                   <ArrowRight size={13} />
                 </button>
                 

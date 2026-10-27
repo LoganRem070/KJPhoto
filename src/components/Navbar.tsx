@@ -38,7 +38,7 @@ export default function Navbar({ currentView, setView }: NavbarProps) {
   ];
 
   const rightLinks: { label: string; view: ViewType }[] = [
-    { label: 'Experiences', view: 'photobooth' },
+    { label: 'Photobooths', view: 'photobooth' },
     { label: 'Packages', view: 'packages' },
     { label: 'Contact', view: 'contact' },
   ];
@@ -107,12 +107,14 @@ export default function Navbar({ currentView, setView }: NavbarProps) {
               onClick={() => handleNavClick(link.view)}
               className="relative py-2 text-right text-luxury-fg/70 hover:text-luxury-fg transition-all cursor-pointer group"
             >
-              <span className={currentView === link.view ? 'text-luxury-accent font-semibold' : ''}>
+              <span className={link.view === 'photobooth'
+                ? 'inline-block bg-luxury-accent px-3 py-1.5 font-bold text-luxury-bg shadow-[0_0_18px_rgba(210,180,140,0.28)] transition-colors group-hover:bg-luxury-fg'
+                : currentView === link.view ? 'text-luxury-accent font-semibold' : ''}>
                 {link.label}
               </span>
               <span
                 className={`absolute bottom-0 right-0 w-full h-[1px] bg-luxury-accent transform scale-x-0 transition-transform duration-300 origin-right group-hover:scale-x-100 ${
-                  currentView === link.view ? 'scale-x-100' : ''
+                  link.view === 'photobooth' ? 'hidden' : currentView === link.view ? 'scale-x-100' : ''
                 }`}
               />
             </button>
@@ -143,8 +145,10 @@ export default function Navbar({ currentView, setView }: NavbarProps) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.08 }}
                   onClick={() => handleNavClick(link.view)}
-                  className={`text-2xl font-serif tracking-[0.15em] uppercase hover:text-luxury-accent transition-colors ${
-                    currentView === link.view ? 'text-luxury-accent font-semibold' : 'text-luxury-fg/80'
+                  className={`text-2xl font-serif tracking-[0.15em] uppercase transition-colors ${
+                    link.view === 'photobooth'
+                      ? 'bg-luxury-accent px-6 py-3 font-semibold text-luxury-bg hover:bg-luxury-fg'
+                      : `${currentView === link.view ? 'text-luxury-accent font-semibold' : 'text-luxury-fg/80'} hover:text-luxury-accent`
                   }`}
                 >
                   {link.label}
